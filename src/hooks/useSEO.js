@@ -9,7 +9,7 @@
  * @param {string} [options.image]     - Optional OG image override (absolute URL)
  */
 
-const BASE_URL = 'https://hiddengroveretreat.com'
+const BASE_URL = 'https://www.hiddengroveretreat.com'
 
 export default function useSEO({ title, description, path, image }) {
   const canonicalUrl = `${BASE_URL}${path}`
