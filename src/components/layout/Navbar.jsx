@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, ChevronDown } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const navLinks = [
   { label: 'Home', path: '/' },
@@ -17,10 +18,15 @@ const navLinks = [
   { label: 'Contact', path: '/contact' },
 ]
 
+const eventTypes = ['Villa Stay', 'Wedding', 'Reception', 'Birthday Party', 'Corporate Event', 'Photoshoot', 'Family Gathering', 'Private Party', 'Other']
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(null)
+  const [bookingOpen, setBookingOpen] = useState(false)
+  const [form, setForm] = useState({ name: '', email: '', phone: '', eventType: '', guests: '', date: '', message: '' })
+  const [sent, setSent] = useState(false)
   const location = useLocation()
   const isHome = location.pathname === '/'
 
@@ -31,6 +37,31 @@ export default function Navbar() {
   }, [])
 
   useEffect(() => setMobileOpen(false), [location])
+
+  const handleFormChange = e => setForm(p => ({ ...p, [e.target.name]: e.target.value }))
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault()
+    const msg = `Hi! I want to make a booking at Hidden Grove Retreat. Here are my details:
+
+*Name:* ${form.name}
+*Email:* ${form.email || 'N/A'}
+*Phone:* ${form.phone}
+*Event/Stay Type:* ${form.eventType}
+*Number of Guests:* ${form.guests || 'N/A'}
+*Preferred Date:* ${form.date || 'N/A'}
+
+*Message:* ${form.message || 'N/A'}`
+
+    const encoded = encodeURIComponent(msg)
+    window.open(`https://wa.me/919063999784?text=${encoded}`, '_blank')
+    setSent(true)
+    setForm({ name: '', email: '', phone: '', eventType: '', guests: '', date: '', message: '' })
+    setTimeout(() => {
+      setSent(false)
+      setBookingOpen(false)
+    }, 2000)
+  }
 
   const isActive = (path) => {
     if (path === '/') return location.pathname === '/'
@@ -106,14 +137,12 @@ export default function Navbar() {
                 )}
               </div>
             ))}
-            <a
-              href="https://wa.me/919063999784?text=Hi!%20I%20want%20to%20make%20a%20booking%20at%20Hidden%20Grove%20Retreat."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-gold text-[0.8rem] py-2 px-4 shadow-md font-bold tracking-wider"
+            <button
+              onClick={() => setBookingOpen(true)}
+              className="btn-gold text-[0.8rem] py-2 px-4 shadow-md font-bold tracking-wider cursor-pointer"
             >
               Book Now
-            </a>
+            </button>
           </div>
 
           {/* Mobile Hamburger */}
@@ -164,16 +193,112 @@ export default function Navbar() {
               )}
             </div>
           ))}
-          <a
-            href="https://wa.me/919063999784?text=Hi!%20I%20want%20to%20make%20a%20booking%20at%20Hidden%20Grove%20Retreat."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-gold mt-4"
+          <button
+            onClick={() => {
+              setMobileOpen(false)
+              setBookingOpen(true)
+            }}
+            className="btn-gold mt-4 cursor-pointer"
           >
             Book Now
-          </a>
+          </button>
         </div>
       )}
+
+      {/* Booking Form Modal */}
+      <AnimatePresence>
+        {bookingOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[9999] bg-[rgba(5,20,12,0.65)] backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto"
+            onClick={() => setBookingOpen(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 20 }}
+              transition={{ type: 'spring', duration: 0.5 }}
+              className="bg-white border border-[rgba(212,175,55,0.25)] p-6 md:p-8 w-full max-w-lg relative shadow-2xl rounded-2xl my-8"
+              onClick={e => e.stopPropagation()}
+            >
+              {/* Close Button */}
+              <button
+                className="absolute top-4 right-4 text-[var(--primary)] hover:text-[var(--gold)] transition-colors p-1 cursor-pointer"
+                onClick={() => setBookingOpen(false)}
+              >
+                <X size={20} />
+              </button>
+
+              <div className="text-center mb-6">
+                <span className="section-label" style={{ fontSize: '0.62rem', letterSpacing: '0.2em' }}>Book Your Stay</span>
+                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.6rem', fontWeight: 700, color: 'var(--primary)', marginTop: '0.25rem' }}>
+                  Inquire & Reserve
+                </h3>
+                <div className="gold-divider mt-2" />
+              </div>
+
+              {sent && (
+                <div style={{ background: '#f0fdf4', border: '1px solid #86efac', padding: '1rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', borderRadius: '8px' }}>
+                  <span style={{ fontSize: '1.1rem' }}>✅</span>
+                  <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.88rem', color: '#166534', fontWeight: 500 }}>
+                    Opening WhatsApp to send your inquiry!
+                  </p>
+                </div>
+              )}
+
+              <form onSubmit={handleFormSubmit} className="space-y-4 max-h-[70vh] overflow-y-auto pr-1">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="luxury-label" style={{ fontSize: '0.65rem' }}>Full Name *</label>
+                    <input name="name" value={form.name} onChange={handleFormChange} required placeholder="Your name" className="luxury-input" />
+                  </div>
+                  <div>
+                    <label className="luxury-label" style={{ fontSize: '0.65rem' }}>Phone Number *</label>
+                    <input name="phone" value={form.phone} onChange={handleFormChange} required placeholder="+91 XXXXX XXXXX" className="luxury-input" />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="luxury-label" style={{ fontSize: '0.65rem' }}>Email Address</label>
+                  <input name="email" value={form.email} onChange={handleFormChange} type="email" placeholder="your@email.com" className="luxury-input" />
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="luxury-label" style={{ fontSize: '0.65rem' }}>Event / Stay Type *</label>
+                    <select name="eventType" value={form.eventType} onChange={handleFormChange} required className="luxury-input" style={{ cursor: 'pointer' }}>
+                      <option value="">Select type...</option>
+                      {eventTypes.map(t => <option key={t} value={t}>{t}</option>)}
+                    </select>
+                  </div>
+                  <div>
+                    <label className="luxury-label" style={{ fontSize: '0.65rem' }}>Number of Guests</label>
+                    <input name="guests" value={form.guests} onChange={handleFormChange} placeholder="e.g. 50" className="luxury-input" />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="luxury-label" style={{ fontSize: '0.65rem' }}>Preferred Date</label>
+                    <input name="date" value={form.date} onChange={handleFormChange} type="date" className="luxury-input" />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="luxury-label" style={{ fontSize: '0.65rem' }}>Message</label>
+                  <textarea name="message" value={form.message} onChange={handleFormChange} rows={3} placeholder="Describe your stay or event requirements..." className="luxury-input" style={{ resize: 'none', fontFamily: "'Inter', sans-serif" }} />
+                </div>
+
+                <button type="submit" className="btn-gold w-full justify-center mt-2 cursor-pointer" style={{ fontSize: '0.78rem', padding: '0.8rem 1.5rem' }}>
+                  Send Booking Request via WhatsApp
+                </button>
+              </form>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   )
 }
