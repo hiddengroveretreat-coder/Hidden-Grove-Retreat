@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRight, Users } from 'lucide-react'
 import PageHero from '../components/layout/PageHero'
@@ -66,8 +67,13 @@ const events = [
 ]
 
 export default function Events() {
+  useEffect(() => {
+    document.title = 'Host Private Events & Weddings | Hidden Grove Retreat'
+  }, [])
+
   return (
     <>
+
       <PageHero
         title="Events & Celebrations"
         subtitle="Every Occasion, Extraordinarily Crafted"

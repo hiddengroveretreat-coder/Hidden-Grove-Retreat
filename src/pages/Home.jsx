@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import HeroSection from '../components/home/HeroSection'
 import AboutSection from '../components/home/AboutSection'
 import VillasSection from '../components/home/VillasSection'
@@ -8,6 +9,10 @@ import TestimonialsSection from '../components/home/TestimonialsSection'
 import BookingCTASection from '../components/home/BookingCTASection'
 
 export default function Home() {
+  useEffect(() => {
+    document.title = 'Hidden Grove Retreat | Where Nature Meets Luxury'
+  }, [])
+
   return (
     <>
       <HeroSection />
@@ -21,3 +26,4 @@ export default function Home() {
     </>
   )
 }
+

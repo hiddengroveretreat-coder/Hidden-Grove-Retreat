@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Check, ArrowRight, X, ZoomIn } from 'lucide-react'
 import PageHero from '../components/layout/PageHero'
@@ -13,8 +13,13 @@ const galleryImgs = [
 export default function HobbitVilla() {
   const [lightbox, setLightbox] = useState(null)
 
+  useEffect(() => {
+    document.title = 'The Hobbit Villa | Hidden Grove Retreat'
+  }, [])
+
   return (
     <>
+
       <PageHero
         title="Nature-Inspired Hideaway"
         img="/images/Property images/WhatsApp Image 2026-06-09 at 11.53.59 AM.jpeg"

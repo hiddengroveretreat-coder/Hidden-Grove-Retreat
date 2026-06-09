@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Phone, Mail, MapPin, Clock, Instagram, Facebook, ArrowRight, Send } from 'lucide-react'
 import PageHero from '../components/layout/PageHero'
@@ -9,7 +9,12 @@ export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', eventType: '', guests: '', date: '', message: '' })
   const [sent, setSent] = useState(false)
 
+  useEffect(() => {
+    document.title = 'Contact & Stays Booking | Hidden Grove Retreat'
+  }, [])
+
   const handleChange = e => setForm(p => ({ ...p, [e.target.name]: e.target.value }))
+
 
   const handleSubmit = (e) => {
     e.preventDefault()

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ZoomIn, X, ChevronLeft, ChevronRight } from 'lucide-react'
 import PageHero from '../components/layout/PageHero'
@@ -86,6 +86,11 @@ const images = [
 export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState('All')
   const [lightboxIndex, setLightboxIndex] = useState(null)
+
+  useEffect(() => {
+    document.title = 'Photo Gallery | Hidden Grove Retreat'
+  }, [])
+
 
   const filtered = activeCategory === 'All' ? images : images.filter(img => img.cat === activeCategory)
 

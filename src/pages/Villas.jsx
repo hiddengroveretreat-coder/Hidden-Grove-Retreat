@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { Check, ArrowRight } from 'lucide-react'
@@ -31,9 +32,14 @@ const villas = [
 ]
 
 export default function Villas() {
+  useEffect(() => {
+    document.title = 'Luxury Villas & Stays | Hidden Grove Retreat'
+  }, [])
+
   return (
     <>
       <PageHero title="Our Premium Villas" subtitle="Two unique experiences, one extraordinary retreat" img="/images/Lawn/WhatsApp Image 2026-06-09 at 11.53.53 AM (3).jpeg" />
+
 
       {villas.map((villa, i) => (
         <section key={villa.id} className={i % 2 === 0 ? 'section-white py-20 lg:py-28' : 'section-light py-20 lg:py-28'}>

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { Analytics } from '@vercel/analytics/react'
@@ -19,17 +19,37 @@ import Contact from './pages/Contact'
 import ScrollToTop from './components/layout/ScrollToTop'
 
 export default function App() {
+  const location = useLocation()
   const [loading, setLoading] = useState(true)
+  const [isInitialLoad, setIsInitialLoad] = useState(true)
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2000)
+    // Initial load: 1.5 seconds loader
+    const timer = setTimeout(() => {
+      setLoading(false)
+      setIsInitialLoad(false)
+    }, 1500)
     return () => clearTimeout(timer)
   }, [])
 
+  useEffect(() => {
+    if (isInitialLoad) return
+
+    // Route change: brief glimpse loader
+    setLoading(true)
+    const timer = setTimeout(() => setLoading(false), 800)
+    return () => clearTimeout(timer)
+  }, [location.pathname])
+
   return (
-    <BrowserRouter>
-      <AnimatePresence>
-        {loading && <PageLoader key="loader" />}
+    <>
+      <AnimatePresence mode="wait">
+        {loading && (
+          <PageLoader
+            key={location.pathname + (isInitialLoad ? '-init' : '-glimpse')}
+            isGlimpse={!isInitialLoad}
+          />
+        )}
       </AnimatePresence>
       <ScrollToTop />
       <ScrollProgress />
@@ -50,6 +70,7 @@ export default function App() {
       <FloatingActions />
       <Analytics />
       <SpeedInsights />
-    </BrowserRouter>
+    </>
   )
 }
+

@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { Check, Leaf, Heart, Star } from 'lucide-react'
@@ -12,9 +13,14 @@ const reasons = [
 ]
 
 export default function About() {
+  useEffect(() => {
+    document.title = 'Our Story | Hidden Grove Retreat'
+  }, [])
+
   return (
     <>
       <PageHero title="Our Story" subtitle="Where every corner tells a tale of nature and luxury" img="/images/Property images/WhatsApp Image 2026-06-09 at 11.53.54 AM (3).jpeg" />
+
 
       {/* Story */}
       <section className="section-white py-20 lg:py-28">

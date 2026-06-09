@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Check, ArrowRight, X, ZoomIn } from 'lucide-react'
 import PageHero from '../components/layout/PageHero'
@@ -14,8 +14,13 @@ const galleryImgs = [
 export default function HeritageVilla() {
   const [lightbox, setLightbox] = useState(null)
 
+  useEffect(() => {
+    document.title = 'The Heritage Villa | Hidden Grove Retreat'
+  }, [])
+
   return (
     <>
+
       <PageHero
         title="Grand Colonial Elegance"
         img="/images/Lawn/WhatsApp Image 2026-06-09 at 11.53.55 AM (2).jpeg"
