@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import useSEO from '../hooks/useSEO'
 import { motion } from 'framer-motion'
 import { Phone, Mail, MapPin, Clock, Instagram, Facebook, ArrowRight, Send } from 'lucide-react'
 import PageHero from '../components/layout/PageHero'
@@ -9,9 +10,11 @@ export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', eventType: '', guests: '', date: '', message: '' })
   const [sent, setSent] = useState(false)
 
-  useEffect(() => {
-    document.title = 'Contact & Stays Booking | Hidden Grove Retreat'
-  }, [])
+  useSEO({
+    title: 'Contact & Book Your Stay | Hidden Grove Retreat Hyderabad',
+    description: 'Contact Hidden Grove Retreat to book a luxury villa stay, inquire about weddings, events, corporate offsites, or photoshoots. Call +91 9063999784 or send us a message.',
+    path: '/contact',
+  })
 
   const handleChange = e => setForm(p => ({ ...p, [e.target.name]: e.target.value }))
 

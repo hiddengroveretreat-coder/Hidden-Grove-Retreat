@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import useSEO from '../hooks/useSEO'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { Check, Leaf, Heart, Star } from 'lucide-react'
@@ -13,9 +13,11 @@ const reasons = [
 ]
 
 export default function About() {
-  useEffect(() => {
-    document.title = 'Our Story | Hidden Grove Retreat'
-  }, [])
+  useSEO({
+    title: 'About Hidden Grove Retreat | Luxury Nature Retreat near Chilkur, Hyderabad',
+    description: 'Discover the story behind Hidden Grove Retreat — a private 1-acre luxury estate near Chilkur Balaji Temple, Hyderabad. Learn about our mission, vision, and what makes us unique.',
+    path: '/about',
+  })
 
   return (
     <>

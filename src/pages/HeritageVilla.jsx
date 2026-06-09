@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import useSEO from '../hooks/useSEO'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Check, ArrowRight, X, ZoomIn } from 'lucide-react'
 import PageHero from '../components/layout/PageHero'
@@ -14,9 +15,12 @@ const galleryImgs = [
 export default function HeritageVilla() {
   const [lightbox, setLightbox] = useState(null)
 
-  useEffect(() => {
-    document.title = 'The Heritage Villa | Hidden Grove Retreat'
-  }, [])
+  useSEO({
+    title: 'Grand Heritage Villa | Private Pool Colonial Stay | Hidden Grove Retreat',
+    description: 'Stay at the Grand Heritage Villa — a 4-bedroom colonial-style luxury villa with private pool, grand hall, fully equipped kitchen, indoor games, and stunning garden views at Hidden Grove Retreat near Hyderabad.',
+    path: '/villas/heritage',
+    image: 'https://hiddengroveretreat.com/images/Lawn/WhatsApp%20Image%202026-06-09%20at%2011.53.55%20AM%20(2).jpeg',
+  })
 
   return (
     <>

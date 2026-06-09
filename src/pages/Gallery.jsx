@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import useSEO from '../hooks/useSEO'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ZoomIn, X, ChevronLeft, ChevronRight } from 'lucide-react'
 import PageHero from '../components/layout/PageHero'
@@ -87,9 +88,11 @@ export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState('All')
   const [lightboxIndex, setLightboxIndex] = useState(null)
 
-  useEffect(() => {
-    document.title = 'Photo Gallery | Hidden Grove Retreat'
-  }, [])
+  useSEO({
+    title: 'Gallery | Hidden Grove Retreat | Villas, Pool & Lawns in Hyderabad',
+    description: 'Browse the photo gallery of Hidden Grove Retreat — stunning views of the Heritage Villa, Hobbit Villa, private swimming pool, event lawns, gardens, and more near Hyderabad.',
+    path: '/gallery',
+  })
 
 
   const filtered = activeCategory === 'All' ? images : images.filter(img => img.cat === activeCategory)

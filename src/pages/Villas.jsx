@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import useSEO from '../hooks/useSEO'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { Check, ArrowRight } from 'lucide-react'
@@ -32,9 +32,11 @@ const villas = [
 ]
 
 export default function Villas() {
-  useEffect(() => {
-    document.title = 'Luxury Villas & Stays | Hidden Grove Retreat'
-  }, [])
+  useSEO({
+    title: 'Luxury Villas & Private Pool Stays | Hidden Grove Retreat Hyderabad',
+    description: 'Choose between the Grand Heritage Villa and the Turf Hobbit Villa at Hidden Grove Retreat. Both feature private pool access, curated interiors, and serene 1-acre nature grounds near Hyderabad.',
+    path: '/villas',
+  })
 
   return (
     <>

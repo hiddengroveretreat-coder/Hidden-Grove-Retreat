@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import useSEO from '../hooks/useSEO'
 import { motion } from 'framer-motion'
 import { ArrowRight, Users } from 'lucide-react'
 import PageHero from '../components/layout/PageHero'
@@ -67,9 +67,11 @@ const events = [
 ]
 
 export default function Events() {
-  useEffect(() => {
-    document.title = 'Host Private Events & Weddings | Hidden Grove Retreat'
-  }, [])
+  useSEO({
+    title: 'Weddings, Corporate Events & Private Parties | Hidden Grove Retreat Hyderabad',
+    description: 'Host unforgettable weddings, birthday parties, corporate events, family reunions, and photoshoots at Hidden Grove Retreat — a premium venue with 1-acre grounds, private pool, and event lawns near Hyderabad.',
+    path: '/events',
+  })
 
   return (
     <>

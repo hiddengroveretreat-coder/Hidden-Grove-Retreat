@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import useSEO from '../hooks/useSEO'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Check, ArrowRight, X, ZoomIn } from 'lucide-react'
 import PageHero from '../components/layout/PageHero'
@@ -13,9 +14,12 @@ const galleryImgs = [
 export default function HobbitVilla() {
   const [lightbox, setLightbox] = useState(null)
 
-  useEffect(() => {
-    document.title = 'The Hobbit Villa | Hidden Grove Retreat'
-  }, [])
+  useSEO({
+    title: 'Turf Hobbit Villa | Nature-Inspired Private Stay | Hidden Grove Retreat',
+    description: 'Experience the unique Turf Hobbit Villa at Hidden Grove Retreat — a nature-inspired 2-bedroom retreat with garden views, outdoor sitting area, and private pool access near Chilkur Balaji Temple, Hyderabad.',
+    path: '/villas/hobbit',
+    image: 'https://hiddengroveretreat.com/images/Property%20images/WhatsApp%20Image%202026-06-09%20at%2011.53.59%20AM.jpeg',
+  })
 
   return (
     <>
