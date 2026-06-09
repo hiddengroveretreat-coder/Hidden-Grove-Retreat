@@ -100,7 +100,7 @@ export default function AboutSection() {
             {/* Main image with double luxury frame */}
             <div className="picture-double-frame shadow-2xl" style={{ aspectRatio: '4/5', background: 'var(--beige)' }}>
               <div className="img-zoom-wrap w-full h-full">
-                <img src="/images/Lawn/WhatsApp Image 2026-06-09 at 11.53.53 AM (2).jpeg" alt="Hidden Grove Retreat property" className="w-full h-full object-cover" />
+                <img src="/images/Lawn/WhatsApp Image 2026-06-09 at 11.53.53 AM (2).jpeg" alt="Hidden Grove Retreat property" loading="lazy" decoding="async" className="w-full h-full object-cover" />
               </div>
             </div>
             {/* Floating accent image with double luxury frame */}
@@ -109,7 +109,7 @@ export default function AboutSection() {
               style={{ position: 'absolute', width: '220px', aspectRatio: '1', background: 'var(--beige)' }}
             >
               <div className="img-zoom-wrap w-full h-full">
-                <img src="/images/Property images/WhatsApp Image 2026-06-09 at 11.53.54 AM (2).jpeg" alt="Villa detail" className="w-full h-full object-cover" />
+                <img src="/images/Property images/WhatsApp Image 2026-06-09 at 11.53.54 AM (2).jpeg" alt="Villa detail" loading="lazy" decoding="async" className="w-full h-full object-cover" />
               </div>
             </div>
             {/* Gold badge */}

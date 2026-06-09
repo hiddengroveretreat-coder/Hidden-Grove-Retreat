@@ -67,7 +67,7 @@ export default function GalleryPreviewSection() {
                 style={{ aspectRatio: '4/3' }}
                 onClick={() => setLightbox(img.src)}
               >
-                <img src={img.src} alt={img.category} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src={img.src} alt={img.category} loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-[rgba(13,59,42,0.55)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-2">
                   <ZoomIn size={24} style={{ color: 'var(--gold)' }} />
                   <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '0.65rem', letterSpacing: '0.2em', color: 'white', textTransform: 'uppercase' }}>

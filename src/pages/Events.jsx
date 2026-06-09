@@ -90,7 +90,7 @@ export default function Events() {
               {/* Image */}
               <motion.div initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.9 }}>
                 <div className="img-zoom-wrap" style={{ aspectRatio: '4/3' }}>
-                  <img src={ev.img} alt={ev.title} className="w-full h-full object-cover" />
+                  <img src={ev.img} alt={ev.title} loading="lazy" decoding="async" className="w-full h-full object-cover" />
                 </div>
               </motion.div>
 

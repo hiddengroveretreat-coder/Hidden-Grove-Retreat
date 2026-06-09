@@ -51,11 +51,11 @@ export default function Villas() {
               <motion.div initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.9 }}>
                 <div className="grid grid-cols-2 gap-3">
                   <div className="img-zoom-wrap col-span-2" style={{ aspectRatio: '16/9' }}>
-                    <img src={villa.img} alt={villa.name} className="w-full h-full object-cover" />
+                    <img src={villa.img} alt={villa.name} loading="lazy" decoding="async" className="w-full h-full object-cover" />
                   </div>
                   {villa.images.slice(0, 2).map((img, j) => (
                     <div key={j} className="img-zoom-wrap" style={{ aspectRatio: '1' }}>
-                      <img src={img} alt={`${villa.name} view ${j + 1}`} className="w-full h-full object-cover" />
+                      <img src={img} alt={`${villa.name} view ${j + 1}`} loading="lazy" decoding="async" className="w-full h-full object-cover" />
                     </div>
                   ))}
                 </div>

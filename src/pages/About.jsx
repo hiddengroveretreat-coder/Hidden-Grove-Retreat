@@ -29,7 +29,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.9 }}>
             <div className="img-zoom-wrap" style={{ aspectRatio: '4/5' }}>
-              <img src="/images/Swimming_Pool/WhatsApp Image 2026-06-09 at 11.53.56 AM (1).jpeg" alt="Hidden Grove Retreat grounds" className="w-full h-full object-cover" />
+              <img src="/images/Swimming_Pool/WhatsApp Image 2026-06-09 at 11.53.56 AM (1).jpeg" alt="Hidden Grove Retreat grounds" loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.9 }}>

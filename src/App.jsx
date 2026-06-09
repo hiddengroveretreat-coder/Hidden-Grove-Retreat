@@ -17,6 +17,7 @@ import Events from './pages/Events'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
 import ScrollToTop from './components/layout/ScrollToTop'
+import NotFound from './pages/NotFound'
 
 export default function App() {
   const location = useLocation()
@@ -64,6 +65,7 @@ export default function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />
