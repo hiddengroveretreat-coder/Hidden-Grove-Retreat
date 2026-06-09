@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { AnimatePresence } from 'framer-motion'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/react'
 import Navbar from './components/layout/Navbar'
@@ -25,10 +26,11 @@ export default function App() {
     return () => clearTimeout(timer)
   }, [])
 
-  if (loading) return <PageLoader />
-
   return (
     <BrowserRouter>
+      <AnimatePresence>
+        {loading && <PageLoader key="loader" />}
+      </AnimatePresence>
       <ScrollToTop />
       <ScrollProgress />
       <Navbar />
