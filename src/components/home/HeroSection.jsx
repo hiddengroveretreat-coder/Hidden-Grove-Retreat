@@ -4,13 +4,12 @@ import { ArrowRight, ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useBooking } from '../../context/BookingContext'
 
-// Hero slides using actual property images
 const slides = [
   { img: '/Heritage villa/Heritage villa/Heritage Villa outlook.png',  label: 'Private Villas'  },
-  { img: '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_29_21 PM.png',  label: 'Lush Grounds'    },
+  { img: '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.47 PM.jpeg',  label: 'Lush Grounds'    },
   { img: '/Hobbit Villa/Hobbit Villa/Hobbit Villa.png', label: 'Luxury Amenities' },
   { img: '/Swimming pool/Swimming pool/ChatGPT Image Jun 9, 2026 at 08_08_09 PM.png', label: 'Elegant Events'  },
-  { img: '/Lawn area/Lawn area/Tree house.PNG', label: 'Nature Retreat'  },
+  { img: '/Lawn area/Lawn area/Lawn-2/WhatsApp Image 2026-06-10 at 3.25.49 PM.jpeg', label: 'Nature Retreat'  },
 ]
 
 // Floating gold particles

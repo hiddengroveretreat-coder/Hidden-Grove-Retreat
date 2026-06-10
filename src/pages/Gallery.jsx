@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ZoomIn, X, ChevronLeft, ChevronRight } from 'lucide-react'
 import PageHero from '../components/layout/PageHero'
 
-const categories = ['All', 'Heritage Villa', 'Hobbit Villa', 'Lawn', 'Pool', 'Games']
+const categories = ['All', 'Heritage Villa', 'Hobbit Villa', 'Lawn', 'Pool', 'Games', 'Events']
 
 const images = [
   // ── Heritage Villa ──
@@ -43,27 +43,33 @@ const images = [
   { src: '/Hobbit Villa/Hobbit Villa/Kitchen.png', cat: 'Hobbit Villa' },
 
   // ── Lawn & Event Area ──
-  { src: '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_11_43 PM.png', cat: 'Lawn' },
-  { src: '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_13_17 PM.png', cat: 'Lawn' },
-  { src: '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_15_40 PM.png', cat: 'Lawn' },
-  { src: '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_20_58 PM.png', cat: 'Lawn' },
-  { src: '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_25_00 PM.png', cat: 'Lawn' },
-  { src: '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_27_40 PM.png', cat: 'Lawn' },
-  { src: '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_29_21 PM.png', cat: 'Lawn' },
-  { src: '/Lawn area/Lawn area/IMG_8070.PNG', cat: 'Lawn' },
-  { src: '/Lawn area/Lawn area/IMG_8071.PNG', cat: 'Lawn' },
-  { src: '/Lawn area/Lawn area/IMG_8075.PNG', cat: 'Lawn' },
-  { src: '/Lawn area/Lawn area/Tree house.PNG', cat: 'Lawn' },
+  { src: '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.47 PM.jpeg', cat: 'Lawn' },
+  { src: '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.47 PM (1).jpeg', cat: 'Lawn' },
+  { src: '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.47 PM (2).jpeg', cat: 'Lawn' },
+  { src: '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.47 PM (3).jpeg', cat: 'Lawn' },
+  { src: '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.48 PM.jpeg', cat: 'Lawn' },
+  { src: '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.48 PM (1).jpeg', cat: 'Lawn' },
+  { src: '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.48 PM (2).jpeg', cat: 'Lawn' },
+  { src: '/Lawn area/Lawn area/Lawn-2/WhatsApp Image 2026-06-10 at 3.25.49 PM.jpeg', cat: 'Lawn' },
+  { src: '/Lawn area/Lawn area/Lawn-2/WhatsApp Image 2026-06-10 at 3.25.50 PM.jpeg', cat: 'Lawn' },
+  { src: '/Lawn area/Lawn area/Lawn-2/WhatsApp Image 2026-06-10 at 3.25.50 PM (1).jpeg', cat: 'Lawn' },
+  { src: '/Lawn area/Lawn area/Lawn-2/WhatsApp Image 2026-06-10 at 3.25.51 PM.jpeg', cat: 'Lawn' },
 
   // ── Swimming Pool ──
   { src: '/Swimming pool/Swimming pool/ChatGPT Image Jun 9, 2026 at 08_06_38 PM.png', cat: 'Pool' },
   { src: '/Swimming pool/Swimming pool/ChatGPT Image Jun 9, 2026 at 08_08_09 PM.png', cat: 'Pool' },
   { src: '/Swimming pool/Swimming pool/ChatGPT Image Jun 9, 2026 at 08_09_31 PM.png', cat: 'Pool' },
 
-  // ── Games Area (new high-quality) ──
   { src: '/Heritage villa/Heritage villa/Games room.png', cat: 'Games' },
   { src: '/Heritage villa/Heritage villa/snooker area.png', cat: 'Games' },
   { src: '/Heritage villa/Heritage villa/foosball.png', cat: 'Games' },
+
+  // ── Events ──
+  { src: '/Events/Event-1.png', cat: 'Events' },
+  { src: '/Events/Event-2.png', cat: 'Events' },
+  { src: '/Events/Event-3.png', cat: 'Events' },
+  { src: '/Events/Event-4.png', cat: 'Events' },
+  { src: '/Events/Event-5.png', cat: 'Events' },
 ]
 
 export default function Gallery() {
@@ -89,7 +95,7 @@ export default function Gallery() {
       <PageHero
         title="Moments Captured in Paradise"
         subtitle="Explore the beauty of our private oasis"
-        img="/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_29_21 PM.png"
+        img="/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.47 PM.jpeg"
       />
 
       {/* Gallery */}

@@ -5,9 +5,9 @@ import { ZoomIn, X } from 'lucide-react'
 
 const previewImages = [
   // Property
-  { src: '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_29_21 PM.png', category: 'Property' },
-  { src: '/Lawn area/Lawn area/Tree house.PNG', category: 'Property' },
-  { src: '/Lawn area/Lawn area/IMG_8075.PNG', category: 'Property' },
+  { src: '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.47 PM.jpeg', category: 'Property' },
+  { src: '/Lawn area/Lawn area/Lawn-2/WhatsApp Image 2026-06-10 at 3.25.49 PM.jpeg', category: 'Property' },
+  { src: '/Lawn area/Lawn area/Lawn-2/WhatsApp Image 2026-06-10 at 3.25.50 PM.jpeg', category: 'Property' },
   { src: '/Heritage villa/Heritage villa/Heritge Villa Front lawn.png', category: 'Property' },
 
   // Villa
@@ -22,15 +22,15 @@ const previewImages = [
   { src: '/Swimming pool/Swimming pool/ChatGPT Image Jun 9, 2026 at 08_09_31 PM.png', category: 'Pool' },
 
   // Events
-  { src: '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_25_00 PM.png', category: 'Events' },
-  { src: '/Heritage villa/Heritage villa/Games room.png', category: 'Events' },
-  { src: '/Swimming pool/Swimming pool/ChatGPT Image Jun 9, 2026 at 08_08_09 PM.png', category: 'Events' },
-  { src: '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_20_58 PM.png', category: 'Events' },
+  { src: '/Events/Event-1.png', category: 'Events' },
+  { src: '/Events/Event-2.png', category: 'Events' },
+  { src: '/Events/Event-3.png', category: 'Events' },
+  { src: '/Events/Event-4.png', category: 'Events' },
 
   // Weddings
-  { src: '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_27_40 PM.png', category: 'Weddings' },
-  { src: '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_29_21 PM.png', category: 'Weddings' },
-  { src: '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_13_17 PM.png', category: 'Weddings' },
+  { src: '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.48 PM.jpeg', category: 'Weddings' },
+  { src: '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.48 PM (1).jpeg', category: 'Weddings' },
+  { src: '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.48 PM (2).jpeg', category: 'Weddings' },
 ]
 
 export default function GalleryPreviewSection() {

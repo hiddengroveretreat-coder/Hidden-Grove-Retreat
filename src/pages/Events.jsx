@@ -8,7 +8,7 @@ const events = [
     id: 'weddings',
     title: 'Weddings & Receptions',
     icon: '💍',
-    img: '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_29_21 PM.png',
+    img: '/Events/Event-1.png',
     desc: 'Your perfect wedding deserves a perfect venue. Our Grand Lawn accommodates 350-400 guests with ample space for all your wedding traditions, ceremonies, and celebrations. The lush natural backdrop creates breathtaking photographs and lifelong memories.',
     capacity: '350 – 400',
     features: ['Bridal Suite', 'Floral Decoration Setup', 'Catering Area', 'Parking for 100+ Vehicles', 'Luxury Restrooms', 'Wedding Photography Spots'],
@@ -18,7 +18,7 @@ const events = [
     id: 'birthdays',
     title: 'Birthday Celebrations',
     icon: '🎂',
-    img: '/Swimming pool/Swimming pool/ChatGPT Image Jun 9, 2026 at 08_06_38 PM.png',
+    img: '/Events/Event-2.png',
     desc: 'Make your milestone birthday unforgettable with a celebration amidst nature. Our Garden Terrace is perfect for intimate birthday parties with family and friends, creating a warm, magical atmosphere for your special day.',
     capacity: '100 – 150',
     features: ['Customizable Decor', 'Cake Cutting Setup', 'DJ & Sound System', 'Catering Space', 'Pool Access', 'Photo Opportunities'],
@@ -28,7 +28,7 @@ const events = [
     id: 'corporate',
     title: 'Corporate Events',
     icon: '💼',
-    img: '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_25_00 PM.png',
+    img: '/Events/Event-3.png',
     desc: 'Step away from the boardroom and into nature. Our retreat provides the perfect setting for team-building activities, corporate offsites, product launches, and client entertaining. A refreshing change that inspires creativity and connection.',
     capacity: '50 – 400',
     features: ['AV Equipment Available', 'Breakout Areas', 'Catering Services', 'Team Building Spaces', 'Villa Accommodation', 'Transportation Assistance'],
@@ -38,7 +38,7 @@ const events = [
     id: 'photoshoots',
     title: 'Photoshoots & Films',
     icon: '📸',
-    img: '/Swimming pool/Swimming pool/ChatGPT Image Jun 9, 2026 at 08_08_09 PM.png',
+    img: '/Events/Event-4.png',
     desc: 'A photographer\'s paradise - our property offers diverse backdrops from colonial heritage architecture to lush tropical greenery, the sparkling pool, and artistic outdoor spaces. Perfect for pre-wedding shoots, fashion photography, and film production.',
     capacity: 'Custom',
     features: ['Multiple Backdrops', 'Heritage Architecture', 'Poolside Sessions', 'Garden Settings', 'Natural Lighting', 'Flexible Timing'],
@@ -48,7 +48,7 @@ const events = [
     id: 'family',
     title: 'Family Gatherings',
     icon: '🏡',
-    img: '/Heritage villa/Heritage villa/Dinning area.png',
+    img: '/Events/Event-5.png',
     desc: 'Reunite with your loved ones in a beautiful, private setting. Whether it\'s a family reunion, a festive celebration, or simply quality time together - our retreat offers the space and warmth to bring families together in the most meaningful way.',
     capacity: '30 – 200',
     features: ['Private Property', 'Kids Play Areas', 'BBQ Setup', 'Pool Access', 'Indoor Games', 'Villa Accommodation'],
@@ -79,7 +79,7 @@ export default function Events() {
       <PageHero
         title="Events & Celebrations"
         subtitle="Every Occasion, Extraordinarily Crafted"
-        img="/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_29_21 PM.png"
+        img="/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.47 PM.jpeg"
       />
 
       {/* Events List */}

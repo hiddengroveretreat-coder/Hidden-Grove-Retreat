@@ -9,13 +9,13 @@ const spaces = [
     subtitle: 'The Grand Lawn',
     desc: 'The Grand Lawn is our premier outdoor event venue, offering an expansive 1-acre manicured green setting. Flanked by lush foliage and tropical trees, it is the perfect canvas for grand weddings, receptions, and large corporate events.',
     images: [
-      '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_29_21 PM.png',
-      '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_27_40 PM.png',
-      '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_25_00 PM.png',
-      '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_20_58 PM.png',
-      '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_15_40 PM.png',
-      '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_13_17 PM.png',
-      '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_11_43 PM.png'
+      '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.47 PM.jpeg',
+      '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.47 PM (1).jpeg',
+      '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.47 PM (2).jpeg',
+      '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.47 PM (3).jpeg',
+      '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.48 PM.jpeg',
+      '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.48 PM (1).jpeg',
+      '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.48 PM (2).jpeg'
     ],
     capacity: '350 – 400',
     capacityNum: 400,
@@ -30,10 +30,10 @@ const spaces = [
     subtitle: 'The Garden Terrace',
     desc: 'The Garden Terrace offers an intimate, forest-like atmosphere surrounded by lush green backdrops. Highlighted by our signature Treehouse, it is an ideal spot for cozy birthday gatherings, cocktails, and private family dinners.',
     images: [
-      '/Lawn area/Lawn area/IMG_8071.PNG',
-      '/Lawn area/Lawn area/IMG_8075.PNG',
-      '/Lawn area/Lawn area/IMG_8070.PNG',
-      '/Lawn area/Lawn area/Tree house.PNG'
+      '/Lawn area/Lawn area/Lawn-2/WhatsApp Image 2026-06-10 at 3.25.49 PM.jpeg',
+      '/Lawn area/Lawn area/Lawn-2/WhatsApp Image 2026-06-10 at 3.25.50 PM.jpeg',
+      '/Lawn area/Lawn area/Lawn-2/WhatsApp Image 2026-06-10 at 3.25.50 PM (1).jpeg',
+      '/Lawn area/Lawn area/Lawn-2/WhatsApp Image 2026-06-10 at 3.25.51 PM.jpeg'
     ],
     capacity: '100 – 150',
     capacityNum: 150,

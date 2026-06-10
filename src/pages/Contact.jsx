@@ -44,7 +44,7 @@ export default function Contact() {
       <PageHero
         title="We'd Love to Hear From You"
         subtitle="Plan your visit and reach out to our team"
-        img="/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_29_21 PM.png"
+        img="/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.47 PM.jpeg"
       />
 
       {/* Main Content */}
