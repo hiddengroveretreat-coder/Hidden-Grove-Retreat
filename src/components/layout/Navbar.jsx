@@ -25,8 +25,20 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(null)
-  const { bookingOpen, setBookingOpen, preSelectedType, preSelectedMessage } = useBooking()
-  const [form, setForm] = useState({ name: '', email: '', phone: '', eventType: '', guests: '', date: '', message: '' })
+  const { bookingOpen, setBookingOpen, preSelectedType, preSelectedMessage, preSelectedVilla } = useBooking()
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    eventType: '',
+    villaOption: '',
+    venueOption: '',
+    guests: '',
+    checkInDate: '',
+    checkOutDate: '',
+    eventDate: '',
+    message: ''
+  })
   const [sent, setSent] = useState(false)
   const location = useLocation()
   const isHome = location.pathname === '/'
@@ -42,10 +54,11 @@ export default function Navbar() {
       setForm(p => ({
         ...p,
         eventType: preSelectedType || p.eventType || '',
-        message: preSelectedMessage || p.message || ''
+        message: preSelectedMessage || p.message || '',
+        villaOption: preSelectedVilla || p.villaOption || ''
       }))
     }
-  }, [bookingOpen, preSelectedType, preSelectedMessage])
+  }, [bookingOpen, preSelectedType, preSelectedMessage, preSelectedVilla])
 
   useEffect(() => setMobileOpen(false), [location])
 
@@ -53,21 +66,61 @@ export default function Navbar() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault()
-    const msg = `Hi! I want to make a booking at Hidden Grove Retreat. Here are my details:
+    let msg = ''
+    if (form.eventType === 'Villa Stay') {
+      msg = `Hi! I want to make a booking at Hidden Grove Retreat. Here are my details:
 
 *Name:* ${form.name}
 *Email:* ${form.email || 'N/A'}
 *Phone:* ${form.phone}
-*Event/Stay Type:* ${form.eventType}
+*Inquiry Type:* Villa Stay
+*Selected Villa:* ${form.villaOption || 'N/A'}
+*Check-in Date:* ${form.checkInDate || 'N/A'}
+*Check-out Date:* ${form.checkOutDate || 'N/A'}
 *Number of Guests:* ${form.guests || 'N/A'}
-*Preferred Date:* ${form.date || 'N/A'}
 
 *Message:* ${form.message || 'N/A'}`
+    } else if (form.eventType && form.eventType !== 'Other') {
+      msg = `Hi! I want to make a booking at Hidden Grove Retreat. Here are my details:
+
+*Name:* ${form.name}
+*Email:* ${form.email || 'N/A'}
+*Phone:* ${form.phone}
+*Inquiry Type:* ${form.eventType}
+*Event Date:* ${form.eventDate || 'N/A'}
+*Venue Area:* ${form.venueOption || 'N/A'}
+*Number of Guests:* ${form.guests || 'N/A'}
+
+*Message:* ${form.message || 'N/A'}`
+    } else {
+      msg = `Hi! I want to make a booking at Hidden Grove Retreat. Here are my details:
+
+*Name:* ${form.name}
+*Email:* ${form.email || 'N/A'}
+*Phone:* ${form.phone}
+*Inquiry Type:* ${form.eventType || 'N/A'}
+*Preferred Date:* ${form.checkInDate || 'N/A'}
+*Number of Guests:* ${form.guests || 'N/A'}
+
+*Message:* ${form.message || 'N/A'}`
+    }
 
     const encoded = encodeURIComponent(msg)
     window.open(`https://wa.me/919063999784?text=${encoded}`, '_blank')
     setSent(true)
-    setForm({ name: '', email: '', phone: '', eventType: '', guests: '', date: '', message: '' })
+    setForm({
+      name: '',
+      email: '',
+      phone: '',
+      eventType: '',
+      villaOption: '',
+      venueOption: '',
+      guests: '',
+      checkInDate: '',
+      checkOutDate: '',
+      eventDate: '',
+      message: ''
+    })
     setTimeout(() => {
       setSent(false)
       setBookingOpen(false)
@@ -276,26 +329,85 @@ export default function Navbar() {
                   <input name="email" value={form.email} onChange={handleFormChange} type="email" placeholder="your@email.com" className="luxury-input" />
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="luxury-label" style={{ fontSize: '0.65rem' }}>Event / Stay Type *</label>
-                    <select name="eventType" value={form.eventType} onChange={handleFormChange} required className="luxury-input" style={{ cursor: 'pointer' }}>
-                      <option value="">Select type...</option>
-                      {eventTypes.map(t => <option key={t} value={t}>{t}</option>)}
-                    </select>
-                  </div>
-                  <div>
-                    <label className="luxury-label" style={{ fontSize: '0.65rem' }}>Number of Guests</label>
-                    <input name="guests" value={form.guests} onChange={handleFormChange} placeholder="e.g. 50" className="luxury-input" />
-                  </div>
+                <div>
+                  <label className="luxury-label" style={{ fontSize: '0.65rem' }}>Event / Stay Type *</label>
+                  <select name="eventType" value={form.eventType} onChange={handleFormChange} required className="luxury-input" style={{ cursor: 'pointer' }}>
+                    <option value="">Select type...</option>
+                    {eventTypes.map(t => <option key={t} value={t}>{t}</option>)}
+                  </select>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="luxury-label" style={{ fontSize: '0.65rem' }}>Preferred Date</label>
-                    <input name="date" value={form.date} onChange={handleFormChange} type="date" className="luxury-input" />
+                {/* Conditional Fields for Villa Stay */}
+                {form.eventType === 'Villa Stay' && (
+                  <>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="luxury-label" style={{ fontSize: '0.65rem' }}>Select Villa *</label>
+                        <select name="villaOption" value={form.villaOption} onChange={handleFormChange} required className="luxury-input" style={{ cursor: 'pointer' }}>
+                          <option value="">Select villa...</option>
+                          <option value="Heritage Villa">Heritage Villa (4 BR, up to 15 guests)</option>
+                          <option value="Turf Hobbit Villa">Turf Hobbit Villa (2 BR, up to 6 guests)</option>
+                          <option value="Both Villas (Full Property)">Both Villas (Full 1-Acre Property)</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label className="luxury-label" style={{ fontSize: '0.65rem' }}>Number of Guests *</label>
+                        <input name="guests" value={form.guests} onChange={handleFormChange} required placeholder="e.g. 8" className="luxury-input" />
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="luxury-label" style={{ fontSize: '0.65rem' }}>Check-in Date *</label>
+                        <input name="checkInDate" value={form.checkInDate} onChange={handleFormChange} type="date" required className="luxury-input" />
+                      </div>
+                      <div>
+                        <label className="luxury-label" style={{ fontSize: '0.65rem' }}>Check-out Date *</label>
+                        <input name="checkOutDate" value={form.checkOutDate} onChange={handleFormChange} type="date" required className="luxury-input" />
+                      </div>
+                    </div>
+                  </>
+                )}
+
+                {/* Conditional Fields for Event Celebrations */}
+                {form.eventType && form.eventType !== 'Villa Stay' && form.eventType !== 'Other' && (
+                  <>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="luxury-label" style={{ fontSize: '0.65rem' }}>Select Venue Area *</label>
+                        <select name="venueOption" value={form.venueOption} onChange={handleFormChange} required className="luxury-input" style={{ cursor: 'pointer' }}>
+                          <option value="">Select venue...</option>
+                          <option value="Lawn Area">Event Lawns</option>
+                          <option value="Pool Side Area">Private Pool Side</option>
+                          <option value="Whole Retreat (Villas + Lawns + Pool)">Whole Retreat (Villas + Lawns + Pool)</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label className="luxury-label" style={{ fontSize: '0.65rem' }}>Estimated Guests *</label>
+                        <input name="guests" value={form.guests} onChange={handleFormChange} required placeholder="e.g. 150" className="luxury-input" />
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="luxury-label" style={{ fontSize: '0.65rem' }}>Event Date *</label>
+                        <input name="eventDate" value={form.eventDate} onChange={handleFormChange} type="date" required className="luxury-input" />
+                      </div>
+                    </div>
+                  </>
+                )}
+
+                {/* Generic Fields for Other / Default */}
+                {(!form.eventType || form.eventType === 'Other') && (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="luxury-label" style={{ fontSize: '0.65rem' }}>Preferred Date *</label>
+                      <input name="checkInDate" value={form.checkInDate} onChange={handleFormChange} type="date" required className="luxury-input" />
+                    </div>
+                    <div>
+                      <label className="luxury-label" style={{ fontSize: '0.65rem' }}>Estimated Guests</label>
+                      <input name="guests" value={form.guests} onChange={handleFormChange} placeholder="e.g. 20" className="luxury-input" />
+                    </div>
                   </div>
-                </div>
+                )}
 
                 <div>
                   <label className="luxury-label" style={{ fontSize: '0.65rem' }}>Message</label>

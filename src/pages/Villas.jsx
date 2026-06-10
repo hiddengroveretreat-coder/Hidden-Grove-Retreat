@@ -99,7 +99,7 @@ export default function Villas() {
                     View Full Details
                   </Link>
                   <button
-                    onClick={() => openBooking('Villa Stay', `Hi! I want to book the ${villa.name} at Hidden Grove Retreat. Please share availability and pricing.`)}
+                    onClick={() => openBooking('Villa Stay', `Hi! I want to book the ${villa.name} at Hidden Grove Retreat. Please share availability and pricing.`, villa.id === 'heritage' ? 'Heritage Villa' : 'Turf Hobbit Villa')}
                     className="btn-gold text-xs cursor-pointer"
                     style={{ border: 'none' }}
                   >

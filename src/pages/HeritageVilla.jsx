@@ -207,7 +207,7 @@ export default function HeritageVilla() {
                 ))}
               </div>
               <button
-                onClick={() => openBooking('Villa Stay', 'Hi! I want to book the Heritage Villa at Hidden Grove Retreat. Please share availability and pricing.')}
+                onClick={() => openBooking('Villa Stay', 'Hi! I want to book the Heritage Villa at Hidden Grove Retreat. Please share availability and pricing.', 'Heritage Villa')}
                 className="btn-gold w-full justify-center mb-3 cursor-pointer"
                 style={{ border: 'none' }}
               >

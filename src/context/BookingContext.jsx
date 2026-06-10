@@ -6,10 +6,12 @@ export function BookingProvider({ children }) {
   const [bookingOpen, setBookingOpen] = useState(false)
   const [preSelectedType, setPreSelectedType] = useState('')
   const [preSelectedMessage, setPreSelectedMessage] = useState('')
+  const [preSelectedVilla, setPreSelectedVilla] = useState('')
 
-  const openBooking = (type = '', message = '') => {
+  const openBooking = (type = '', message = '', villa = '') => {
     setPreSelectedType(type)
     setPreSelectedMessage(message)
+    setPreSelectedVilla(villa)
     setBookingOpen(true)
   }
 
@@ -18,7 +20,17 @@ export function BookingProvider({ children }) {
   }
 
   return (
-    <BookingContext.Provider value={{ bookingOpen, setBookingOpen, preSelectedType, preSelectedMessage, openBooking, closeBooking }}>
+    <BookingContext.Provider
+      value={{
+        bookingOpen,
+        setBookingOpen,
+        preSelectedType,
+        preSelectedMessage,
+        preSelectedVilla,
+        openBooking,
+        closeBooking
+      }}
+    >
       {children}
     </BookingContext.Provider>
   )

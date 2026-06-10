@@ -87,7 +87,7 @@ function VillaCard({ villa, delay }) {
             Explore Villa <span style={{ color: 'var(--gold)', marginLeft: '4px' }}>→</span>
           </Link>
           <button
-            onClick={() => openBooking('Villa Stay', `Hi! I want to book the ${villa.name} at Hidden Grove Retreat. Please share availability and pricing.`)}
+            onClick={() => openBooking('Villa Stay', `Hi! I want to book the ${villa.name} at Hidden Grove Retreat. Please share availability and pricing.`, villa.id === 'heritage' ? 'Heritage Villa' : 'Turf Hobbit Villa')}
             className="btn-gold shimmer-badge text-xs py-2 cursor-pointer"
             style={{ padding: '0.75rem 1.5rem', border: 'none' }}
           >
