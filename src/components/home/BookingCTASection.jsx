@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
+import { useBooking } from '../../context/BookingContext'
 
 export default function BookingCTASection() {
+  const { openBooking } = useBooking()
   return (
     <section className="relative py-28 lg:py-36 overflow-hidden">
       {/* Background */}
@@ -81,23 +83,20 @@ export default function BookingCTASection() {
           transition={{ duration: 0.7, delay: 0.45 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-8"
         >
-          <a
-            href="https://wa.me/919063999784?text=Hi!%20I%20want%20to%20book%20a%20villa%20stay%20at%20Hidden%20Grove%20Retreat."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-gold shimmer-badge"
+          <button
+            onClick={() => openBooking('Villa Stay', 'Hi! I want to book a villa stay at Hidden Grove Retreat. Please share availability and pricing.')}
+            className="btn-gold shimmer-badge cursor-pointer"
             style={{ minWidth: '190px', justifyContent: 'center' }}
           >
             Book Your Stay <ArrowRight size={14} />
-          </a>
-          <a
-            href="https://wa.me/919063999784?text=Hi!%20I%20want%20to%20plan%20an%20event%20at%20Hidden%20Grove%20Retreat."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-link-white py-2"
+          </button>
+          <button
+            onClick={() => openBooking('Wedding', 'Hi! I want to plan an event at Hidden Grove Retreat. Please share event details and package options.')}
+            className="btn-link-white py-2 cursor-pointer"
+            style={{ border: 'none', background: 'none' }}
           >
             Plan Your Event <ArrowRight size={14} />
-          </a>
+          </button>
         </motion.div>
 
         {/* Contact quick info */}

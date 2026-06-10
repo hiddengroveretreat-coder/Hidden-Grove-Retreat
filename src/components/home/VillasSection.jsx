@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, Check } from 'lucide-react'
 import VillaImageSlider from '../layout/VillaImageSlider'
+import { useBooking } from '../../context/BookingContext'
 
 const villas = [
   {
@@ -46,6 +47,7 @@ function useInView(ref) {
 }
 
 function VillaCard({ villa, delay }) {
+  const { openBooking } = useBooking()
   return (
     <motion.div
       initial={{ opacity: 0, y: 60 }}
@@ -84,15 +86,13 @@ function VillaCard({ villa, delay }) {
           <Link to={villa.path} className="btn-link-primary py-1">
             Explore Villa <span style={{ color: 'var(--gold)', marginLeft: '4px' }}>→</span>
           </Link>
-          <a
-            href={`https://wa.me/919063999784?text=Hi!%20I%20want%20to%20book%20the%20${encodeURIComponent(villa.name)}%20at%20Hidden%20Grove%20Retreat.`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-gold shimmer-badge text-xs py-2"
-            style={{ padding: '0.75rem 1.5rem' }}
+          <button
+            onClick={() => openBooking('Villa Stay', `Hi! I want to book the ${villa.name} at Hidden Grove Retreat. Please share availability and pricing.`)}
+            className="btn-gold shimmer-badge text-xs py-2 cursor-pointer"
+            style={{ padding: '0.75rem 1.5rem', border: 'none' }}
           >
             Book Now
-          </a>
+          </button>
         </div>
       </div>
     </motion.div>

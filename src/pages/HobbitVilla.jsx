@@ -3,6 +3,7 @@ import useSEO from '../hooks/useSEO'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Check, ArrowRight, X, ZoomIn, ChevronLeft, ChevronRight } from 'lucide-react'
 import PageHero from '../components/layout/PageHero'
+import { useBooking } from '../context/BookingContext'
 
 const BASE = '/Hobbit Villa/Hobbit Villa'
 
@@ -72,6 +73,7 @@ export default function HobbitVilla() {
   const [activeRoom, setActiveRoom] = useState('exterior')
   const [lightbox, setLightbox]     = useState(null)   // { src, alt }
   const [lbIndex, setLbIndex]       = useState(0)
+  const { openBooking } = useBooking()
 
   useSEO({
     title: 'Turf Hobbit Villa | Nature-Inspired Private Stay | Hidden Grove Retreat',
@@ -156,14 +158,13 @@ export default function HobbitVilla() {
                   </div>
                 ))}
               </div>
-              <a
-                href="https://wa.me/919063999784?text=Hi!%20I%20want%20to%20book%20the%20Hobbit%20Villa%20at%20Hidden%20Grove%20Retreat.%20Please%20share%20availability%20and%20pricing."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-gold w-full justify-center mb-3"
+              <button
+                onClick={() => openBooking('Villa Stay', 'Hi! I want to book the Hobbit Villa at Hidden Grove Retreat. Please share availability and pricing.')}
+                className="btn-gold w-full justify-center mb-3 cursor-pointer"
+                style={{ border: 'none' }}
               >
                 Book via WhatsApp <ArrowRight size={14} />
-              </a>
+              </button>
               <a href="tel:+919063999784" className="btn-outline w-full justify-center">
                 Call to Inquire
               </a>

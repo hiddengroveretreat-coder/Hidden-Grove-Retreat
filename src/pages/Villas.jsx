@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { Check, ArrowRight } from 'lucide-react'
 import PageHero from '../components/layout/PageHero'
 import VillaImageSlider from '../components/layout/VillaImageSlider'
+import { useBooking } from '../context/BookingContext'
 
 const villas = [
   {
@@ -33,6 +34,7 @@ const villas = [
 ]
 
 export default function Villas() {
+  const { openBooking } = useBooking()
   useSEO({
     title: 'Luxury Villas & Private Pool Stays | Hidden Grove Retreat Hyderabad',
     description: 'Choose between the Grand Heritage Villa and the Turf Hobbit Villa at Hidden Grove Retreat. Both feature private pool access, curated interiors, and serene 1-acre nature grounds near Hyderabad.',
@@ -96,14 +98,13 @@ export default function Villas() {
                   <Link to={villa.path} className="btn-primary text-xs">
                     View Full Details
                   </Link>
-                  <a
-                    href={`https://wa.me/919063999784?text=Hi!%20I%20want%20to%20book%20the%20${encodeURIComponent(villa.name)}%20at%20Hidden%20Grove%20Retreat.`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-gold text-xs"
+                  <button
+                    onClick={() => openBooking('Villa Stay', `Hi! I want to book the ${villa.name} at Hidden Grove Retreat. Please share availability and pricing.`)}
+                    className="btn-gold text-xs cursor-pointer"
+                    style={{ border: 'none' }}
                   >
                     Book This Villa <ArrowRight size={13} />
-                  </a>
+                  </button>
                 </div>
               </motion.div>
             </div>

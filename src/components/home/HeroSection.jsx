@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useBooking } from '../../context/BookingContext'
 
 // Hero slides using actual property images
 const slides = [
@@ -44,6 +45,7 @@ function Particles() {
 export default function HeroSection() {
   const [current, setCurrent] = useState(0)
   const timerRef = useRef(null)
+  const { openBooking } = useBooking()
 
   useEffect(() => {
     timerRef.current = setInterval(() => {
@@ -230,25 +232,22 @@ export default function HeroSection() {
           transition={{ delay: 1.4, duration: 0.8 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-8 mt-2"
         >
-          <a
-            href="https://wa.me/919063999784?text=Hi!%20I%20want%20to%20book%20a%20villa%20stay%20at%20Hidden%20Grove%20Retreat.%20Please%20share%20availability%20and%20pricing."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-gold shimmer-badge"
+          <button
+            onClick={() => openBooking('Villa Stay', 'Hi! I want to book a villa stay at Hidden Grove Retreat. Please share availability and pricing.')}
+            className="btn-gold shimmer-badge cursor-pointer"
             style={{ minWidth: '190px', justifyContent: 'center' }}
           >
             Book Your Stay
             <ArrowRight size={14} />
-          </a>
-          <a
-            href="https://wa.me/919063999784?text=Hi!%20I%20want%20to%20plan%20an%20event%20at%20Hidden%20Grove%20Retreat.%20Please%20share%20event%20package%20details."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-link-white py-2"
+          </button>
+          <button
+            onClick={() => openBooking('Corporate Event', 'Hi! I want to plan an event at Hidden Grove Retreat. Please share event package details.')}
+            className="btn-link-white py-2 cursor-pointer"
+            style={{ border: 'none', background: 'none' }}
           >
             Plan Your Event
             <ArrowRight size={14} />
-          </a>
+          </button>
         </motion.div>
       </div>
 

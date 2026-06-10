@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/react'
+import { BookingProvider } from './context/BookingContext'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import FloatingActions from './components/layout/FloatingActions'
@@ -43,7 +44,7 @@ export default function App() {
   }, [location.pathname])
 
   return (
-    <>
+    <BookingProvider>
       <AnimatePresence mode="wait">
         {loading && (
           <PageLoader
@@ -72,7 +73,7 @@ export default function App() {
       <FloatingActions />
       <Analytics />
       <SpeedInsights />
-    </>
+    </BookingProvider>
   )
 }
 

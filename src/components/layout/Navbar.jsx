@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useBooking } from '../../context/BookingContext'
 
 const navLinks = [
   { label: 'Home', path: '/' },
@@ -24,7 +25,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(null)
-  const [bookingOpen, setBookingOpen] = useState(false)
+  const { bookingOpen, setBookingOpen, preSelectedType, preSelectedMessage } = useBooking()
   const [form, setForm] = useState({ name: '', email: '', phone: '', eventType: '', guests: '', date: '', message: '' })
   const [sent, setSent] = useState(false)
   const location = useLocation()
@@ -35,6 +36,16 @@ export default function Navbar() {
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  useEffect(() => {
+    if (bookingOpen) {
+      setForm(p => ({
+        ...p,
+        eventType: preSelectedType || p.eventType || '',
+        message: preSelectedMessage || p.message || ''
+      }))
+    }
+  }, [bookingOpen, preSelectedType, preSelectedMessage])
 
   useEffect(() => setMobileOpen(false), [location])
 
