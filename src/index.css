@@ -328,14 +328,6 @@ button, .btn {
   inset: 0;
   background-size: cover;
   background-position: center;
-  transition: opacity 1.8s ease-in-out;
-  transform: scale(1.05);
-  animation: kenBurns 8s ease-in-out infinite alternate;
-}
-
-@keyframes kenBurns {
-  from { transform: scale(1.05); }
-  to   { transform: scale(1.12); }
 }
 
 .hero-overlay {

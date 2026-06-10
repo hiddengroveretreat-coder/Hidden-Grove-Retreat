@@ -63,14 +63,14 @@ export default function HeroSection() {
   return (
     <section className="hero-section" id="home">
       {/* Slideshow */}
-      <div className="hero-slideshow">
-        <AnimatePresence mode="sync">
+      <div className="hero-slideshow" style={{ background: '#05140c' }}>
+        <AnimatePresence initial={false} mode="sync">
           <motion.div
             key={current}
-            initial={{ opacity: 0, scale: 1.06 }}
-            animate={{ opacity: 1, scale: 1.0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.8, ease: 'easeInOut' }}
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '-100%' }}
+            transition={{ duration: 1.0, ease: [0.25, 1, 0.5, 1] }}
             className="hero-slide"
             style={{ backgroundImage: `url("${slides[current].img}")` }}
           />
