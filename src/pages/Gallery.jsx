@@ -42,6 +42,11 @@ const images = [
   { src: '/Hobbit Villa/Hobbit Villa/Bedroom-2.png', cat: 'Hobbit Villa' },
   { src: '/Hobbit Villa/Hobbit Villa/Kitchen.png', cat: 'Hobbit Villa' },
 
+  // ── Hobbit Villa Bathroom ──
+  { src: '/Hobbit Villa/Hobbit Villa/Bathroom/Bathroom-1.png', cat: 'Hobbit Villa' },
+  { src: '/Hobbit Villa/Hobbit Villa/Bathroom/Bathroom-1.1.png', cat: 'Hobbit Villa' },
+  { src: '/Hobbit Villa/Hobbit Villa/Bathroom/Bathroom-1.2.png', cat: 'Hobbit Villa' },
+
   { src: '/Lawn area/Lawn area/Lawn-1/Lawn-1.png', cat: 'Lawn' },
   { src: '/Lawn area/Lawn area/Lawn-1/Lawn-1.1.png', cat: 'Lawn' },
   { src: '/Lawn area/Lawn area/Lawn-1/Lawn-1.2.png', cat: 'Lawn' },
