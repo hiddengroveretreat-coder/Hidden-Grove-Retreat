@@ -11,7 +11,7 @@ const events = [
     img: '/Events/Event-1.png',
     desc: 'Your perfect wedding deserves a perfect venue. Our Grand Lawn accommodates 350-400 guests with ample space for all your wedding traditions, ceremonies, and celebrations. The lush natural backdrop creates breathtaking photographs and lifelong memories.',
     capacity: '350 – 400',
-    features: ['Bridal Suite', 'Floral Decoration Setup', 'Catering Area', 'Parking for 100+ Vehicles', 'Luxury Restrooms', 'Wedding Photography Spots'],
+    features: ['Bridal Suite', 'Floral Decoration Setup', 'Catering Area', 'Parking for 100+ Vehicles', 'Commercial Outdoor Washrooms (Men & Women)', 'Wedding Photography Spots'],
     whatsapp: 'I want to inquire about hosting my Wedding at Hidden Grove Retreat.',
   },
   {
@@ -31,7 +31,7 @@ const events = [
     img: '/Events/Event-3.png',
     desc: 'Step away from the boardroom and into nature. Our retreat provides the perfect setting for team-building activities, corporate offsites, product launches, and client entertaining. A refreshing change that inspires creativity and connection.',
     capacity: '50 – 400',
-    features: ['AV Equipment Available', 'Breakout Areas', 'Catering Services', 'Team Building Spaces', 'Villa Accommodation', 'Transportation Assistance'],
+    features: ['AV Equipment Available', 'Breakout Areas', 'Catering Services', 'Team Building (Cricket & Badminton)', 'Villa Accommodation', 'Transportation Assistance'],
     whatsapp: 'I want to plan a Corporate Event at Hidden Grove Retreat.',
   },
   {
@@ -51,7 +51,7 @@ const events = [
     img: '/Events/Event-5.png',
     desc: 'Reunite with your loved ones in a beautiful, private setting. Whether it\'s a family reunion, a festive celebration, or simply quality time together - our retreat offers the space and warmth to bring families together in the most meaningful way.',
     capacity: '30 – 200',
-    features: ['Private Property', 'Kids Play Areas', 'BBQ Setup', 'Pool Access', 'Indoor Games', 'Villa Accommodation'],
+    features: ['Private Property', 'Kids Play Areas', 'BBQ Setup', 'Pool Access', 'Indoor & Outdoor Games (Cricket, Badminton, Snooker, Foosball)', 'Villa Accommodation'],
     whatsapp: 'I want to book Hidden Grove Retreat for a Family Gathering.',
   },
   {

@@ -3,9 +3,9 @@ import { Waves, Gamepad2, ParkingCircle, Bath, Flower2, Briefcase, Camera, Users
 
 const amenities = [
   { icon: Waves,        label: 'Swimming Pool',       desc: 'A private crystal oasis surrounded by lush lounge chairs.' },
-  { icon: Gamepad2,     label: 'Indoor Games Room',   desc: 'Equipped with table tennis, board games, and recreation spaces.' },
+  { icon: Gamepad2,     label: 'Sports & Recreation', desc: 'Equipped with Snooker, Foosball, Table Tennis, board games, plus outdoor Cricket and Badminton sets.' },
   { icon: ParkingCircle,label: 'Parking Area',        desc: 'Spacious secure parking area within the retreat boundary.' },
-  { icon: Bath,         label: 'Commercial Washrooms',desc: 'High-end fully equipped clean sanitary facilities for events.' },
+  { icon: Bath,         label: 'Commercial Washrooms',desc: 'Commercial outdoor washrooms for men and women are available for all events.' },
   { icon: Flower2,      label: 'Wedding Venue',       desc: 'Dreamy backdrop lawns for pre-wedding & grand matrimonial events.' },
   { icon: Briefcase,    label: 'Corporate Events',    desc: 'Quiet natural ambience ideal for offsites, workshops & retreats.' },
   { icon: Camera,       label: 'Photoshoots',         desc: 'Scenic spots, rustic brickwork & greenery for photography.' },

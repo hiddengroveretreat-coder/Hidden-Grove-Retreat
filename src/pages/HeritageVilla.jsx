@@ -9,8 +9,8 @@ const BASE = '/Heritage villa/Heritage villa'
 
 const features = [
   'Grand Hall', 'Dining Area', 'Fully Functional Kitchen',
-  '4 Bedrooms', 'Attached Bathrooms', 'Indoor Games Room',
-  'Private Entrance', 'Premium Furnishings', 'Air Conditioning',
+  '4 Bedrooms', 'Attached Bathrooms', 'Snooker & Board Games',
+  'Private Entrance', 'Cricket & Badminton Sets', 'Air Conditioning',
   'Smart TV', 'High-speed WiFi', 'Dedicated Parking',
 ]
 

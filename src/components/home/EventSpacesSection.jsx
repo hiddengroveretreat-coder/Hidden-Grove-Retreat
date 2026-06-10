@@ -19,7 +19,7 @@ const spaces = [
     ],
     capacity: '350 – 400',
     capacityNum: 400,
-    features: ['Bridal Dressing Suite', 'Dedicated Catering Setup Space', 'Parking for 100+ Vehicles', 'Luxury Event Restrooms', 'Stage & Sound Friendly Layout'],
+    features: ['Bridal Dressing Suite', 'Dedicated Catering Setup Space', 'Parking for 100+ Vehicles', 'Commercial Outdoor Washrooms (Men & Women)', 'Cricket & Badminton Turf/Sets', 'Stage & Sound Friendly Layout'],
     occasions: ['Weddings', 'Receptions', 'Corporate Events', 'Large Gatherings'],
     icon: Star,
     color: 'var(--primary)',

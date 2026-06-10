@@ -10,7 +10,7 @@ const BASE = '/Hobbit Villa/Hobbit Villa'
 const features = [
   'Nature-Inspired Architecture', 'Spacious Hall', 'Fully Equipped Kitchen',
   '2 Bedrooms', 'Common Bathroom', 'Attached Bathroom',
-  'Green Covered Exterior', 'Garden Views', 'Outdoor Sitting Area', 'Nature Walks Nearby'
+  'Green Covered Exterior', 'Garden Views', 'Outdoor Sitting Area', 'Cricket & Badminton Sets'
 ]
 
 // ── Room sections with their images & descriptions ───────────────────
