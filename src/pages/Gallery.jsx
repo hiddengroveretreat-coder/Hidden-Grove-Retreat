@@ -42,18 +42,17 @@ const images = [
   { src: '/Hobbit Villa/Hobbit Villa/Bedroom-2.png', cat: 'Hobbit Villa' },
   { src: '/Hobbit Villa/Hobbit Villa/Kitchen.png', cat: 'Hobbit Villa' },
 
-  // ── Lawn & Event Area ──
-  { src: '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.47 PM.jpeg', cat: 'Lawn' },
-  { src: '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.47 PM (1).jpeg', cat: 'Lawn' },
-  { src: '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.47 PM (2).jpeg', cat: 'Lawn' },
-  { src: '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.47 PM (3).jpeg', cat: 'Lawn' },
-  { src: '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.48 PM.jpeg', cat: 'Lawn' },
-  { src: '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.48 PM (1).jpeg', cat: 'Lawn' },
-  { src: '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.48 PM (2).jpeg', cat: 'Lawn' },
-  { src: '/Lawn area/Lawn area/Lawn-2/WhatsApp Image 2026-06-10 at 3.25.49 PM.jpeg', cat: 'Lawn' },
-  { src: '/Lawn area/Lawn area/Lawn-2/WhatsApp Image 2026-06-10 at 3.25.50 PM.jpeg', cat: 'Lawn' },
-  { src: '/Lawn area/Lawn area/Lawn-2/WhatsApp Image 2026-06-10 at 3.25.50 PM (1).jpeg', cat: 'Lawn' },
-  { src: '/Lawn area/Lawn area/Lawn-2/WhatsApp Image 2026-06-10 at 3.25.51 PM.jpeg', cat: 'Lawn' },
+  { src: '/Lawn area/Lawn area/Lawn-1/Lawn-1.png', cat: 'Lawn' },
+  { src: '/Lawn area/Lawn area/Lawn-1/Lawn-1.1.png', cat: 'Lawn' },
+  { src: '/Lawn area/Lawn area/Lawn-1/Lawn-1.2.png', cat: 'Lawn' },
+  { src: '/Lawn area/Lawn area/Lawn-1/Lawn-1.3.png', cat: 'Lawn' },
+  { src: '/Lawn area/Lawn area/Lawn-1/Lawn-1.4.png', cat: 'Lawn' },
+  { src: '/Lawn area/Lawn area/Lawn-1/Lawn-1.5.PNG', cat: 'Lawn' },
+  { src: '/Lawn area/Lawn area/Lawn-1/Lawn-1.6.PNG', cat: 'Lawn' },
+  { src: '/Lawn area/Lawn area/Lawn-2/Lawn-2.png', cat: 'Lawn' },
+  { src: '/Lawn area/Lawn area/Lawn-2/Lawn-2.1.png', cat: 'Lawn' },
+  { src: '/Lawn area/Lawn area/Lawn-2/Lawn-2.2.PNG', cat: 'Lawn' },
+  { src: '/Lawn area/Lawn area/Lawn-2/Lawn2.3-Tree house.PNG', cat: 'Lawn' },
 
   // ── Swimming Pool ──
   { src: '/Swimming pool/Swimming pool/ChatGPT Image Jun 9, 2026 at 08_06_38 PM.png', cat: 'Pool' },
@@ -64,12 +63,13 @@ const images = [
   { src: '/Heritage villa/Heritage villa/snooker area.png', cat: 'Games' },
   { src: '/Heritage villa/Heritage villa/foosball.png', cat: 'Games' },
 
-  // ── Events ──
   { src: '/Events/Event-1.png', cat: 'Events' },
   { src: '/Events/Event-2.png', cat: 'Events' },
   { src: '/Events/Event-3.png', cat: 'Events' },
-  { src: '/Events/Event-4.png', cat: 'Events' },
+  { src: '/Events/Event-4.jpeg', cat: 'Events' },
   { src: '/Events/Event-5.png', cat: 'Events' },
+  { src: '/Events/Event-6.jpeg', cat: 'Events' },
+  { src: '/Events/Event-7.jpeg', cat: 'Events' },
 ]
 
 export default function Gallery() {
@@ -95,7 +95,7 @@ export default function Gallery() {
       <PageHero
         title="Moments Captured in Paradise"
         subtitle="Explore the beauty of our private oasis"
-        img="/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.47 PM.jpeg"
+        img="/Lawn area/Lawn area/Lawn-1/Lawn-1.png"
       />
 
       {/* Gallery */}

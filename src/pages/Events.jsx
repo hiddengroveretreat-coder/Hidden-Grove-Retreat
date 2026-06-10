@@ -38,7 +38,7 @@ const events = [
     id: 'photoshoots',
     title: 'Photoshoots & Films',
     icon: '📸',
-    img: '/Events/Event-4.png',
+    img: '/Events/Event-4.jpeg',
     desc: 'A photographer\'s paradise - our property offers diverse backdrops from colonial heritage architecture to lush tropical greenery, the sparkling pool, and artistic outdoor spaces. Perfect for pre-wedding shoots, fashion photography, and film production.',
     capacity: 'Custom',
     features: ['Multiple Backdrops', 'Heritage Architecture', 'Poolside Sessions', 'Garden Settings', 'Natural Lighting', 'Flexible Timing'],
@@ -79,7 +79,7 @@ export default function Events() {
       <PageHero
         title="Events & Celebrations"
         subtitle="Every Occasion, Extraordinarily Crafted"
-        img="/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.47 PM.jpeg"
+        img="/Lawn area/Lawn area/Lawn-1/Lawn-1.png"
       />
 
       {/* Events List */}

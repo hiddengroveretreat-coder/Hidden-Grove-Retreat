@@ -5,9 +5,9 @@ import { ZoomIn, X } from 'lucide-react'
 
 const previewImages = [
   // Property
-  { src: '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.47 PM.jpeg', category: 'Property' },
-  { src: '/Lawn area/Lawn area/Lawn-2/WhatsApp Image 2026-06-10 at 3.25.49 PM.jpeg', category: 'Property' },
-  { src: '/Lawn area/Lawn area/Lawn-2/WhatsApp Image 2026-06-10 at 3.25.50 PM.jpeg', category: 'Property' },
+  { src: '/Lawn area/Lawn area/Lawn-1/Lawn-1.png', category: 'Property' },
+  { src: '/Lawn area/Lawn area/Lawn-2/Lawn-2.png', category: 'Property' },
+  { src: '/Lawn area/Lawn area/Lawn-2/Lawn-2.1.png', category: 'Property' },
   { src: '/Heritage villa/Heritage villa/Heritge Villa Front lawn.png', category: 'Property' },
 
   // Villa
@@ -21,16 +21,18 @@ const previewImages = [
   { src: '/Swimming pool/Swimming pool/ChatGPT Image Jun 9, 2026 at 08_08_09 PM.png', category: 'Pool' },
   { src: '/Swimming pool/Swimming pool/ChatGPT Image Jun 9, 2026 at 08_09_31 PM.png', category: 'Pool' },
 
-  // Events
   { src: '/Events/Event-1.png', category: 'Events' },
   { src: '/Events/Event-2.png', category: 'Events' },
   { src: '/Events/Event-3.png', category: 'Events' },
-  { src: '/Events/Event-4.png', category: 'Events' },
+  { src: '/Events/Event-4.jpeg', category: 'Events' },
+  { src: '/Events/Event-5.png', category: 'Events' },
+  { src: '/Events/Event-6.jpeg', category: 'Events' },
+  { src: '/Events/Event-7.jpeg', category: 'Events' },
 
   // Weddings
-  { src: '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.48 PM.jpeg', category: 'Weddings' },
-  { src: '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.48 PM (1).jpeg', category: 'Weddings' },
-  { src: '/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.48 PM (2).jpeg', category: 'Weddings' },
+  { src: '/Lawn area/Lawn area/Lawn-1/Lawn-1.4.png', category: 'Weddings' },
+  { src: '/Lawn area/Lawn area/Lawn-1/Lawn-1.5.PNG', category: 'Weddings' },
+  { src: '/Lawn area/Lawn area/Lawn-1/Lawn-1.6.PNG', category: 'Weddings' },
 ]
 
 export default function GalleryPreviewSection() {

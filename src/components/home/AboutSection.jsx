@@ -100,7 +100,7 @@ export default function AboutSection() {
             {/* Main image with double luxury frame */}
             <div className="picture-double-frame shadow-2xl" style={{ aspectRatio: '4/5', background: 'var(--beige)' }}>
               <div className="img-zoom-wrap w-full h-full">
-                <img src="/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.47 PM.jpeg" alt="Hidden Grove Retreat property" loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                 <img src="/Lawn area/Lawn area/Lawn-1/Lawn-1.png" alt="Hidden Grove Retreat property" loading="lazy" decoding="async" className="w-full h-full object-cover" />
               </div>
             </div>
             {/* Floating accent image with double luxury frame */}

@@ -17,7 +17,7 @@ const villas = [
       '/Heritage villa/Heritage villa/Hall area.png'
     ],
     features: ['Grand Hall', 'Dining Area', 'Fully Functional Kitchen', '4 Bedrooms', 'Attached Bathrooms', 'Indoor Games Room'],
-    guests: 'Up to 15 Guests',
+    guests: 'Up to 16+ Guests',
     path: '/villas/heritage',
   },
   {
@@ -31,7 +31,7 @@ const villas = [
       '/Hobbit Villa/Hobbit Villa/Hall-1.png'
     ],
     features: ['Nature-Inspired Architecture', 'Spacious Hall', 'Fully Equipped Kitchen', '2 Bedrooms', 'Common Bathroom', 'Green Covered Exterior'],
-    guests: 'Up to 6 Guests',
+    guests: 'Up to 6+ Guests',
     path: '/villas/hobbit',
   },
 ]

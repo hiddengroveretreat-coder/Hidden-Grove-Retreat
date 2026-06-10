@@ -21,7 +21,7 @@ export default function About() {
 
   return (
     <>
-      <PageHero title="Our Story" subtitle="Where every corner tells a tale of nature and luxury" img="/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.47 PM.jpeg" />
+      <PageHero title="Our Story" subtitle="Where every corner tells a tale of nature and luxury" img="/Lawn area/Lawn area/Lawn-1/Lawn-1.png" />
 
 
       {/* Story */}

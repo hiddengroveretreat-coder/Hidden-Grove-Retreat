@@ -11,7 +11,7 @@ export default function BookingCTASection() {
         style={{
           position: 'absolute',
           inset: 0,
-          backgroundImage: 'url("/Lawn area/Lawn area/Lawn-1/WhatsApp Image 2026-06-10 at 3.23.47 PM.jpeg")',
+          backgroundImage: 'url("/Lawn area/Lawn area/Lawn-1/Lawn-1.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
