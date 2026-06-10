@@ -2,14 +2,19 @@ import { useRef, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, Check } from 'lucide-react'
+import VillaImageSlider from '../layout/VillaImageSlider'
 
 const villas = [
   {
     id: 'heritage',
     name: 'Heritage Villa',
     tagline: 'Grand Colonial Elegance',
-    img: '/images/Lawn/WhatsApp Image 2026-06-09 at 11.53.55 AM (2).jpeg',
-    hoverImg: '/images/Lawn/WhatsApp Image 2026-06-09 at 11.53.55 AM (3).jpeg',
+    images: [
+      '/Heritage villa/Heritage villa/Heritage Villa outlook.png',
+      '/Heritage villa/Heritage villa/Heritge Villa Front lawn.png',
+      '/Heritage villa/Heritage villa/Sitout area.png',
+      '/Heritage villa/Heritage villa/Hall area.png'
+    ],
     features: ['Grand Hall', 'Dining Area', 'Fully Functional Kitchen', '4 Bedrooms', 'Attached Bathrooms', 'Indoor Games Room'],
     guests: 'Up to 15 Guests',
     path: '/villas/heritage',
@@ -18,8 +23,12 @@ const villas = [
     id: 'hobbit',
     name: 'Hobbit Villa',
     tagline: 'Nature-Inspired Charm',
-    img: '/images/Property images/WhatsApp Image 2026-06-09 at 11.53.59 AM.jpeg',
-    hoverImg: '/images/Property images/WhatsApp Image 2026-06-09 at 11.59.45 AM (1).jpeg',
+    images: [
+      '/Hobbit Villa/Hobbit Villa/Hobbit Villa.png',
+      '/Hobbit Villa/Hobbit Villa/Hobbit villa main entrance-1.png',
+      '/Hobbit Villa/Hobbit Villa/hobbit villa back view.png',
+      '/Hobbit Villa/Hobbit Villa/Hall-1.png'
+    ],
     features: ['Nature-Inspired Architecture', 'Spacious Hall', 'Fully Equipped Kitchen', '2 Bedrooms', 'Common Bathroom', 'Green Covered Exterior'],
     guests: 'Up to 6 Guests',
     path: '/villas/hobbit',
@@ -37,7 +46,6 @@ function useInView(ref) {
 }
 
 function VillaCard({ villa, delay }) {
-  const [hovered, setHovered] = useState(false)
   return (
     <motion.div
       initial={{ opacity: 0, y: 60 }}
@@ -45,41 +53,15 @@ function VillaCard({ villa, delay }) {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.9, delay, ease: [0.22, 1, 0.36, 1] }}
       className="luxury-card group relative overflow-hidden transition-all duration-500 border-l-4 border-l-transparent hover:border-l-[var(--gold)]"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
     >
-      {/* Image */}
-      <div className="img-zoom-wrap relative" style={{ height: '320px', overflow: 'hidden' }}>
-        <img
-          src={hovered ? villa.hoverImg : villa.img}
-          alt={villa.name}
-          className="w-full h-full object-cover transition-all duration-700"
-        />
-        {/* Guest badge with shimmer */}
-        <div className="shimmer-badge" style={{
-          position: 'absolute',
-          top: '1rem',
-          right: '1rem',
-          background: 'rgba(255,255,255,0.92)',
-          backdropFilter: 'blur(8px)',
-          padding: '0.45rem 1rem',
-          border: '1px solid rgba(212,175,55,0.45)',
-        }}>
-          <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.1em', color: 'var(--primary)' }}>
-            {villa.guests}
-          </span>
-        </div>
-        {/* Overlay on hover */}
-        <motion.div
-          animate={{ opacity: hovered ? 1 : 0 }}
-          transition={{ duration: 0.35 }}
-          style={{ position: 'absolute', inset: 0, background: 'rgba(13,59,42,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-        >
-          <Link to={villa.path} className="btn-outline-white text-xs">
-            View Villa Details
-          </Link>
-        </motion.div>
-      </div>
+      {/* Slider Image component */}
+      <VillaImageSlider 
+        images={villa.images} 
+        name={villa.name} 
+        path={villa.path} 
+        guests={villa.guests}
+        aspectRatio="16/10"
+      />
 
       {/* Content */}
       <div style={{ padding: '2rem' }}>
@@ -129,7 +111,7 @@ export default function VillasSection() {
             Two Distinct Villa Experiences
           </h2>
           <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '1rem', color: 'var(--text-muted)', marginTop: '0.75rem', maxWidth: '540px', margin: '0.75rem auto 0' }}>
-            Each villa tells its own story — choose the experience that speaks to your soul.
+            Each villa tells its own story - choose the experience that speaks to your soul.
           </p>
         </div>
 

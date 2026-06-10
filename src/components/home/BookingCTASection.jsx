@@ -9,7 +9,7 @@ export default function BookingCTASection() {
         style={{
           position: 'absolute',
           inset: 0,
-          backgroundImage: 'url("/images/Lawn/WhatsApp Image 2026-06-09 at 11.53.57 AM (2).jpeg")',
+          backgroundImage: 'url("/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_29_21 PM.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
@@ -71,7 +71,7 @@ export default function BookingCTASection() {
           transition={{ duration: 0.7, delay: 0.3 }}
           style={{ fontFamily: "'Inter', sans-serif", fontSize: '1.05rem', color: 'rgba(255,255,255,0.75)', marginBottom: '2.5rem', lineHeight: 1.8 }}
         >
-          Whether it's a tranquil villa stay, a grand wedding, or an intimate celebration — Hidden Grove Retreat is your perfect canvas.
+          Whether it's a tranquil villa stay, a grand wedding, or an intimate celebration - Hidden Grove Retreat is your perfect canvas.
         </motion.p>
 
         <motion.div

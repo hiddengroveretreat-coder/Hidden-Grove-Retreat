@@ -75,7 +75,7 @@ export default function PageLoader({ isGlimpse = false }) {
               marginTop: '0.1rem',
             }}
           >
-            — The Retreat —
+            - Retreat -
           </motion.p>
         )}
       </div>

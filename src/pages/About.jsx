@@ -9,19 +9,19 @@ const reasons = [
   { icon: Leaf,  title: '1 Acre of Nature',    text: 'Immersed in lush greenery, our property provides a true escape from city life.' },
   { icon: Star,  title: 'Premium Amenities',   text: 'From private pool to indoor games, every facility is curated for your comfort.' },
   { icon: Heart, title: 'Personal Service',    text: 'Our dedicated team ensures every detail of your stay or event is flawless.' },
-  { icon: Check, title: 'Versatile Spaces',    text: 'Two villas and two event lawns — perfect for any occasion, any size.' },
+  { icon: Check, title: 'Versatile Spaces',    text: 'Two villas and two event lawns - perfect for any occasion, any size.' },
 ]
 
 export default function About() {
   useSEO({
     title: 'About Hidden Grove Retreat | Luxury Nature Retreat near Chilkur, Hyderabad',
-    description: 'Discover the story behind Hidden Grove Retreat — a private 1-acre luxury estate near Chilkur Balaji Temple, Hyderabad. Learn about our mission, vision, and what makes us unique.',
+    description: 'Discover the story behind Hidden Grove Retreat - a private 1-acre luxury estate near Chilkur Balaji Temple, Hyderabad. Learn about our mission, vision, and what makes us unique.',
     path: '/about',
   })
 
   return (
     <>
-      <PageHero title="Our Story" subtitle="Where every corner tells a tale of nature and luxury" img="/images/Property images/WhatsApp Image 2026-06-09 at 11.53.54 AM (3).jpeg" />
+      <PageHero title="Our Story" subtitle="Where every corner tells a tale of nature and luxury" img="/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_29_21 PM.png" />
 
 
       {/* Story */}
@@ -42,11 +42,11 @@ export default function About() {
               Hidden Grove Retreat was born from a simple vision: to create a place where the beauty of nature and the warmth of celebration come together seamlessly. Nestled on a private 1-acre estate near the sacred Chilkur Balaji Temple, we set out to craft an experience unlike any other in Hyderabad.
             </p>
             <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.98rem', lineHeight: 1.9, color: 'var(--text-muted)', marginBottom: '2rem' }}>
-              Every element of our retreat — from the two beautifully designed villas to the lush event lawns and sparkling private pool — has been carefully curated to offer our guests the perfect blend of natural serenity and sophisticated luxury.
+              Every element of our retreat - from the two beautifully designed villas to the lush event lawns and sparkling private pool - has been carefully curated to offer our guests the perfect blend of natural serenity and sophisticated luxury.
             </p>
             <div style={{ padding: '1.5rem', background: 'var(--beige)', borderLeft: '3px solid var(--gold)' }}>
               <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.05rem', fontStyle: 'italic', color: 'var(--primary)', lineHeight: 1.7 }}>
-                "We don't just offer a venue. We offer an experience — one that becomes a cherished memory for every guest who walks through our gates."
+                "We don't just offer a venue. We offer an experience - one that becomes a cherished memory for every guest who walks through our gates."
               </p>
             </div>
           </motion.div>
@@ -58,8 +58,8 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { title: 'Our Mission', icon: '🌿', text: 'To provide an unparalleled luxury retreat experience that combines the tranquility of nature with world-class hospitality — creating a space where every celebration becomes extraordinary and every stay becomes a cherished memory.' },
-              { title: 'Our Vision',  icon: '✨', text: "To become Hyderabad's most sought-after luxury retreat destination — a name synonymous with elegance, nature, and unforgettable experiences for stays, weddings, events, and everything in between." },
+              { title: 'Our Mission', icon: '🌿', text: 'To provide an unparalleled luxury retreat experience that combines the tranquility of nature with world-class hospitality - creating a space where every celebration becomes extraordinary and every stay becomes a cherished memory.' },
+              { title: 'Our Vision',  icon: '✨', text: "To become Hyderabad's most sought-after luxury retreat destination - a name synonymous with elegance, nature, and unforgettable experiences for stays, weddings, events, and everything in between." },
             ].map(item => (
               <motion.div key={item.title} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="luxury-card p-8">
                 <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{item.icon}</div>

@@ -4,15 +4,33 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ZoomIn, X } from 'lucide-react'
 
 const previewImages = [
-  { src: '/images/Lawn/WhatsApp Image 2026-06-09 at 11.53.53 AM (1).jpeg', category: 'Property' },
-  { src: '/images/Lawn/WhatsApp Image 2026-06-09 at 11.53.54 AM (1).jpeg', category: 'Villa' },
-  { src: '/images/Swimming_Pool/WhatsApp Image 2026-06-09 at 11.53.55 AM (1).jpeg', category: 'Pool' },
-  { src: '/images/Swimming_Pool/WhatsApp Image 2026-06-09 at 11.53.56 AM.jpeg', category: 'Events' },
-  { src: '/images/Lawn/WhatsApp Image 2026-06-09 at 11.53.58 AM (3).jpeg', category: 'Weddings' },
-  { src: '/images/Property images/WhatsApp Image 2026-06-09 at 11.59.45 AM (2).jpeg', category: 'Property' },
-  { src: '/images/Property images/WhatsApp Image 2026-06-09 at 11.59.47 AM (2).jpeg', category: 'Villa' },
-  { src: '/images/Property images/WhatsApp Image 2026-06-09 at 11.59.50 AM (1).jpeg', category: 'Events' },
-  { src: '/images/Property images/WhatsApp Image 2026-06-09 at 11.59.53 AM (1).jpeg', category: 'Property' },
+  // Property
+  { src: '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_29_21 PM.png', category: 'Property' },
+  { src: '/Lawn area/Lawn area/Tree house.PNG', category: 'Property' },
+  { src: '/Lawn area/Lawn area/IMG_8075.PNG', category: 'Property' },
+  { src: '/Heritage villa/Heritage villa/Heritge Villa Front lawn.png', category: 'Property' },
+
+  // Villa
+  { src: '/Heritage villa/Heritage villa/Heritage Villa outlook.png', category: 'Villa' },
+  { src: '/Hobbit Villa/Hobbit Villa/Hobbit Villa.png', category: 'Villa' },
+  { src: '/Heritage villa/Heritage villa/Hall area.png', category: 'Villa' },
+  { src: '/Hobbit Villa/Hobbit Villa/Hall-1.png', category: 'Villa' },
+
+  // Pool
+  { src: '/Swimming pool/Swimming pool/ChatGPT Image Jun 9, 2026 at 08_06_38 PM.png', category: 'Pool' },
+  { src: '/Swimming pool/Swimming pool/ChatGPT Image Jun 9, 2026 at 08_08_09 PM.png', category: 'Pool' },
+  { src: '/Swimming pool/Swimming pool/ChatGPT Image Jun 9, 2026 at 08_09_31 PM.png', category: 'Pool' },
+
+  // Events
+  { src: '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_25_00 PM.png', category: 'Events' },
+  { src: '/Heritage villa/Heritage villa/Games room.png', category: 'Events' },
+  { src: '/Swimming pool/Swimming pool/ChatGPT Image Jun 9, 2026 at 08_08_09 PM.png', category: 'Events' },
+  { src: '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_20_58 PM.png', category: 'Events' },
+
+  // Weddings
+  { src: '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_27_40 PM.png', category: 'Weddings' },
+  { src: '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_29_21 PM.png', category: 'Weddings' },
+  { src: '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_13_17 PM.png', category: 'Weddings' },
 ]
 
 export default function GalleryPreviewSection() {

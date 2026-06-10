@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { Check, ArrowRight } from 'lucide-react'
 import PageHero from '../components/layout/PageHero'
+import VillaImageSlider from '../components/layout/VillaImageSlider'
 
 const villas = [
   {
@@ -10,24 +11,24 @@ const villas = [
     name: 'Heritage Villa',
     tagline: 'Grand Colonial Elegance',
     desc: 'The Heritage Villa is a grand colonial-inspired retreat that seamlessly blends timeless architecture with modern luxury. With its spacious interiors and premium finishes, it is the perfect choice for larger groups and families seeking an unforgettable experience.',
-    img: '/images/Lawn/WhatsApp Image 2026-06-09 at 11.53.55 AM (2).jpeg',
+    img: '/Heritage villa/Heritage villa/Heritage Villa outlook.png',
     guests: 'Up to 15 Guests',
     bedrooms: '4',
     path: '/villas/heritage',
     features: ['Grand Hall', 'Dining Area', 'Fully Functional Kitchen', '4 Bedrooms', 'Attached Bathrooms', 'Indoor Games Room', 'Private Entrance', 'Premium Furnishings'],
-    images: ['/images/Lawn/WhatsApp Image 2026-06-09 at 11.53.55 AM (3).jpeg', '/images/Games/WhatsApp Image 2026-06-09 at 11.53.55 AM.jpeg', '/images/Swimming_Pool/WhatsApp Image 2026-06-09 at 11.53.56 AM (1).jpeg'],
+    images: ['/Heritage villa/Heritage villa/Heritage Villa outlook.png', '/Heritage villa/Heritage villa/Heritge Villa Front lawn.png', '/Heritage villa/Heritage villa/Sitout area.png', '/Heritage villa/Heritage villa/Hall area.png'],
   },
   {
     id: 'hobbit',
     name: 'Hobbit Villa',
     tagline: 'Nature-Inspired Hideaway',
     desc: 'Inspired by the whimsical architecture of nature, the Hobbit Villa is a charming and intimate retreat. Its green-covered exterior and cozy interiors make it a magical escape for couples, small families, and those who seek a closer connection with nature.',
-    img: '/images/Property images/WhatsApp Image 2026-06-09 at 11.53.59 AM.jpeg',
+    img: '/Hobbit Villa/Hobbit Villa/Hobbit Villa.png',
     guests: 'Up to 6 Guests',
     bedrooms: '2',
     path: '/villas/hobbit',
     features: ['Nature-Inspired Architecture', 'Spacious Hall', 'Fully Equipped Kitchen', '2 Bedrooms', 'Common Bathroom', 'Attached Bathroom', 'Green Covered Exterior', 'Cozy Garden View'],
-    images: ['/images/Property images/WhatsApp Image 2026-06-09 at 11.59.45 AM (1).jpeg', '/images/Property images/WhatsApp Image 2026-06-09 at 11.59.45 AM (2).jpeg', '/images/Property images/WhatsApp Image 2026-06-09 at 11.59.45 AM.jpeg'],
+    images: ['/Hobbit Villa/Hobbit Villa/Hobbit Villa.png', '/Hobbit Villa/Hobbit Villa/Hobbit villa main entrance-1.png', '/Hobbit Villa/Hobbit Villa/hobbit villa back view.png', '/Hobbit Villa/Hobbit Villa/Hall-1.png'],
   },
 ]
 
@@ -40,25 +41,22 @@ export default function Villas() {
 
   return (
     <>
-      <PageHero title="Our Premium Villas" subtitle="Two unique experiences, one extraordinary retreat" img="/images/Lawn/WhatsApp Image 2026-06-09 at 11.53.53 AM (3).jpeg" />
+      <PageHero title="Our Premium Villas" subtitle="Two unique experiences, one extraordinary retreat" img="/Heritage villa/Heritage villa/Heritage Villa outlook.png" />
 
 
       {villas.map((villa, i) => (
         <section key={villa.id} className={i % 2 === 0 ? 'section-white py-20 lg:py-28' : 'section-light py-20 lg:py-28'}>
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''}`}>
-              {/* Image */}
+              {/* Image Slider */}
               <motion.div initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.9 }}>
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="img-zoom-wrap col-span-2" style={{ aspectRatio: '16/9' }}>
-                    <img src={villa.img} alt={villa.name} loading="lazy" decoding="async" className="w-full h-full object-cover" />
-                  </div>
-                  {villa.images.slice(0, 2).map((img, j) => (
-                    <div key={j} className="img-zoom-wrap" style={{ aspectRatio: '1' }}>
-                      <img src={img} alt={`${villa.name} view ${j + 1}`} loading="lazy" decoding="async" className="w-full h-full object-cover" />
-                    </div>
-                  ))}
-                </div>
+                <VillaImageSlider
+                  images={villa.images}
+                  name={villa.name}
+                  guests={villa.guests}
+                  path={villa.path}
+                  aspectRatio="16/10"
+                />
               </motion.div>
 
               {/* Content */}

@@ -90,7 +90,7 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
-          {/* Left — Images */}
+          {/* Left - Images */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -100,7 +100,7 @@ export default function AboutSection() {
             {/* Main image with double luxury frame */}
             <div className="picture-double-frame shadow-2xl" style={{ aspectRatio: '4/5', background: 'var(--beige)' }}>
               <div className="img-zoom-wrap w-full h-full">
-                <img src="/images/Lawn/WhatsApp Image 2026-06-09 at 11.53.53 AM (2).jpeg" alt="Hidden Grove Retreat property" loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                <img src="/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_29_21 PM.png" alt="Hidden Grove Retreat property" loading="lazy" decoding="async" className="w-full h-full object-cover" />
               </div>
             </div>
             {/* Floating accent image with double luxury frame */}
@@ -109,7 +109,7 @@ export default function AboutSection() {
               style={{ position: 'absolute', width: '220px', aspectRatio: '1', background: 'var(--beige)' }}
             >
               <div className="img-zoom-wrap w-full h-full">
-                <img src="/images/Property images/WhatsApp Image 2026-06-09 at 11.53.54 AM (2).jpeg" alt="Villa detail" loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                <img src="/Heritage villa/Heritage villa/Heritage Villa outlook.png" alt="Villa detail" loading="lazy" decoding="async" className="w-full h-full object-cover" />
               </div>
             </div>
             {/* Gold badge */}
@@ -169,7 +169,7 @@ export default function AboutSection() {
             </motion.div>
           </motion.div>
 
-          {/* Right — Content */}
+          {/* Right - Content */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -195,13 +195,13 @@ export default function AboutSection() {
               variants={itemVariants}
               style={{ fontFamily: "'Inter', sans-serif", fontSize: '1rem', lineHeight: 1.9, color: 'var(--text-body)', marginBottom: '1rem' }}
             >
-              Welcome to <strong>Hidden Grove Retreat</strong> — a private 1-acre destination designed for stays, events, private celebrations, photoshoots, and memorable gatherings amidst nature.
+              Welcome to <strong>Hidden Grove Retreat</strong> - a private 1-acre destination designed for stays, events, private celebrations, photoshoots, and memorable gatherings amidst nature.
             </motion.p>
             <motion.p
               variants={itemVariants}
               style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.95rem', lineHeight: 1.9, color: 'var(--text-muted)', marginBottom: '2.5rem' }}
             >
-              Nestled near the sacred Chilkur Balaji Temple, our retreat blends lush greenery with sophisticated luxury — two premium villas, expansive event lawns, a private pool, and impeccable hospitality await you.
+              Nestled near the sacred Chilkur Balaji Temple, our retreat blends lush greenery with sophisticated luxury - two premium villas, expansive event lawns, a private pool, and impeccable hospitality await you.
             </motion.p>
 
             {/* Stats Grid */}

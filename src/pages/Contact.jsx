@@ -44,7 +44,7 @@ export default function Contact() {
       <PageHero
         title="We'd Love to Hear From You"
         subtitle="Plan your visit and reach out to our team"
-        img="/images/Lawn/WhatsApp Image 2026-06-09 at 11.53.58 AM (3).jpeg"
+        img="/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_29_21 PM.png"
       />
 
       {/* Main Content */}
@@ -52,7 +52,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
 
-            {/* Left — Contact Info + Map */}
+            {/* Left - Contact Info + Map */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -154,7 +154,7 @@ export default function Contact() {
               </div>
             </motion.div>
 
-            {/* Right — Inquiry Form */}
+            {/* Right - Inquiry Form */}
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}

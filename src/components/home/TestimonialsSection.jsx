@@ -35,7 +35,7 @@ const testimonials = [
     name: 'Kavitha Photography',
     event: 'Photoshoot Session',
     rating: 5,
-    text: 'As a professional photographer, I\'ve shot at many luxury venues. Hidden Grove Retreat stands out with its diverse backdrops — from the heritage architecture to the lush greenery. Stunning results every time.',
+    text: 'As a professional photographer, I\'ve shot at many luxury venues. Hidden Grove Retreat stands out with its diverse backdrops - from the heritage architecture to the lush greenery. Stunning results every time.',
     avatar: '📸',
   },
 ]

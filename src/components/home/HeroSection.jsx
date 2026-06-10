@@ -5,11 +5,11 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 // Hero slides using actual property images
 const slides = [
-  { img: '/images/Lawn/WhatsApp Image 2026-06-09 at 11.53.52 AM.jpeg',  label: 'Private Villas'  },
-  { img: '/images/Property images/WhatsApp Image 2026-06-09 at 11.53.53 AM.jpeg',  label: 'Lush Grounds'    },
-  { img: '/images/Lawn/WhatsApp Image 2026-06-09 at 11.53.54 AM.jpeg', label: 'Luxury Amenities' },
-  { img: '/images/Swimming_Pool/WhatsApp Image 2026-06-09 at 11.53.56 AM (2).jpeg', label: 'Elegant Events'  },
-  { img: '/images/Lawn/WhatsApp Image 2026-06-09 at 11.53.57 AM.jpeg', label: 'Nature Retreat'  },
+  { img: '/Heritage villa/Heritage villa/Heritage Villa outlook.png',  label: 'Private Villas'  },
+  { img: '/Lawn area/Lawn area/ChatGPT Image Jun 9, 2026 at 08_29_21 PM.png',  label: 'Lush Grounds'    },
+  { img: '/Hobbit Villa/Hobbit Villa/Hobbit Villa.png', label: 'Luxury Amenities' },
+  { img: '/Swimming pool/Swimming pool/ChatGPT Image Jun 9, 2026 at 08_08_09 PM.png', label: 'Elegant Events'  },
+  { img: '/Lawn area/Lawn area/Tree house.PNG', label: 'Nature Retreat'  },
 ]
 
 // Floating gold particles
@@ -169,7 +169,7 @@ export default function HeroSection() {
                 textShadow: '0 2px 10px rgba(0,0,0,0.85)'
               }}
             >
-              — The Retreat —
+              -  Retreat -
             </motion.p>
           </div>
         </motion.div>
@@ -305,7 +305,7 @@ export default function HeroSection() {
             textTransform: 'uppercase',
             color: 'var(--gold)',
           }}>
-            {String(current + 1).padStart(2, '0')} / {String(slides.length).padStart(2, '0')} — {slides[current].label}
+            {String(current + 1).padStart(2, '0')} / {String(slides.length).padStart(2, '0')} - {slides[current].label}
           </span>
         </motion.div>
       </AnimatePresence>
