@@ -205,7 +205,7 @@ export default function AboutSection() {
             </motion.p>
 
             {/* Stats Grid */}
-            <motion.div ref={statsRef} variants={itemVariants} className="grid grid-cols-3 gap-6 mb-8">
+            <motion.div ref={statsRef} variants={itemVariants} className="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-6 mb-8">
               {stats.map((s) => (
                 <div key={s.label} className="border-l-2 border-[rgba(212,175,55,0.5)] pl-4 hover:bg-[rgba(212,175,55,0.03)] transition-colors py-2 rounded-r-md">
                   <p className="stat-number">
