@@ -22,10 +22,11 @@ const roomSections = [
     desc: 'Inspired by the whimsical aesthetics of nature, the Hobbit Villa features a unique grass-covered exterior structure that blends seamlessly into the surrounding 1-acre property. Features a beautiful private bridge and pathway.',
     highlights: ['Unique Turf Roof', 'Private Bridge & Pond', 'Forest Setting', 'Garden Deck Sitout'],
     images: [
-      { src: `${BASE}/Hobbit Villa.png`,                 alt: 'Hobbit Villa Outlook' },
-      { src: `${BASE}/Hobbit villa main entrance-1.png`,  alt: 'Main Entrance' },
-      { src: `${BASE}/Hobbit villa entrance-2.jpg`,       alt: 'Entrance Path' },
-      { src: `${BASE}/hobbit villa back view.png`,        alt: 'Back View' },
+      { src: `${BASE}/Hobbit Villa.png`,                             alt: 'Hobbit Villa Outlook' },
+      { src: `${BASE}/hobbit villa back view.png`,                    alt: 'Back View' },
+      { src: `${BASE}/Hobbit villa main entrance-1.png`,              alt: 'Main Entrance' },
+      { src: '/Lawn area/Lawn area/Lawn-1/Lawn-1.png',               alt: 'Garden & Lawn' },
+      { src: '/Lawn area/Lawn area/Lawn-1/Lawn-1.1.png',             alt: 'Lawn View' },
     ],
   },
   {
